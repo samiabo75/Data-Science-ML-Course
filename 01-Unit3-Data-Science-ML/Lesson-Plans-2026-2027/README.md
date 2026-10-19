@@ -4,6 +4,9 @@
 [תהליך הפרויקט לתלמיד](./Project-Workflow-Student-Guide.md) · [דוגמת חקר מלאה](./Project-Workflow/README.md) · [עוגני ההשתלמות והשיפורים](./Workshop-Sources-and-Adaptations.md) · [דוח הבדיקה](./Lesson-Quality-Audit-2026-10-19.md).
 [התכנון התלת־שנתי](./Three-Year-Foundation-90H.md) · [הקשרים להמשך](./Three-Year-Bridges-Matrix.md) · [החלטות צמצום](./Scope-Decisions-90H.md).
 
+## מצגות תומכות
+[פרומפט וקובץ מקור לכל שיעור — מה להעלות ל־NotebookLM](./NotebookLM-Presentations-Index.md).
+
 ## ערכות
 לכל ערכה דוגמה פתורה, תרגול עצמאי, פתרון מתועד ומדריך למורה. המחברות הן התאמות שלנו למתחילים, וחומרי המקור מקושרים ונשמרים. לפי דיווח המורה נלמד רק המבוא; שאר הסטטוסים הם הכנת חומר ולא ביצוע בכיתה.
 
