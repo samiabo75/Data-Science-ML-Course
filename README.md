@@ -20,3 +20,10 @@
 - [חזון פדגוגי משולב לשלוש התוכניות](./THREE-CURRICULA-TEACHING-VISION.md)
 - [מפת מושגים וקשרים רוחביים](./THREE-CURRICULA-CONCEPT-MAP.md)
 - [היערכות למפגש ביום שלישי 20.10.2026](./NEXT-MEETING-PREPARATION-2026-10-20.md)
+
+
+## תכנית יחידה3 כבסיס להמשך — 2026–2027
+- [תכנית90שעות:פרויקט בכיתה י׳ ויסוד לנושאי ליבה ול־DL](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Three-Year-Foundation-90H.md)
+- [מפת גשרים ורמות עומק בשלוש התכניות](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Three-Year-Bridges-Matrix.md)
+- [מה נשמר,מצומצם ונדחה](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Scope-Decisions-90H.md)
+מפרט בחינת יחידה3 נשמר;מיפוי תוכן אינו אישור ניקוד רשמי או הוכחה שהתלמידים כבר למדו אותו.
