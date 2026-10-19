@@ -18,3 +18,6 @@
 
 ## מצגת תומכת ב־NotebookLM
 [פרומפט להעתקה](./NotebookLM-Presentation-Prompt.md) · [קובץ המקור להעלאה](./NotebookLM-Presentation-Source.md). מעלים את המקור בלבד ומעתיקים את הפרומפט להנחיות; אין צורך להעלות מחברתפתרון. [הנחיות שימוש](../NotebookLM-Presentations-Index.md).
+
+## התאמת מצגת ההשתלמות
+**מפגש:** 2;9. **שם לחיפוש:** 2.1 Python for DS; Data Preparation2. קובץמצגת המקור אינו במאגר. [קישורים לחומר הזמין והחלק המתאים לשיעור](../Workshop-Slides-Mapping.md#lesson-29).

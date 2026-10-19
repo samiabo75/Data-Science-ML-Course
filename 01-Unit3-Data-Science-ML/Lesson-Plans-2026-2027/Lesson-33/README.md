@@ -18,3 +18,6 @@
 
 ## מצגת תומכת ב־NotebookLM
 [פרומפט להעתקה](./NotebookLM-Presentation-Prompt.md) · [קובץ המקור להעלאה](./NotebookLM-Presentation-Source.md). מעלים את המקור בלבד ומעתיקים את הפרומפט להנחיות; אין צורך להעלות מחברתפתרון. [הנחיות שימוש](../NotebookLM-Presentations-Index.md).
+
+## התאמת מצגת ההשתלמות
+**מפגש:** 11. **שם לחיפוש:** Percepton and SVM. קובץמצגת המקור אינו במאגר. [קישורים לחומר הזמין והחלק המתאים לשיעור](../Workshop-Slides-Mapping.md#lesson-33).
