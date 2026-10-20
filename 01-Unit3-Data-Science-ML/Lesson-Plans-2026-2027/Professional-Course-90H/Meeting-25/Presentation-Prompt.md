@@ -1,5 +1,19 @@
 # פרומפט ליצירת מצגת — מפגש 25 — רגרסיה משולבת וניתוח גודל הטעות
-**למורה: ** העלו כמקור את Presentation-Brief.md מאותה תיקייה, ואת מצגת ההשתלמות המקושרת הרלוונטית אם רוצים את העוגן המקורי. את ההוראות שמתחת לקו מעתיקים להנחיות יצירת המצגת. אין להעלות את Teacher-Solution.ipynb.
+
+## מה לצרף ליצירת המצגת ב־NotebookLM?
+
+1. **הסיכום המקצועי למצגת:** [Presentation-Brief.md](./Presentation-Brief.md) של מפגש 25. זהו מקור התוכן המרכזי, הכולל את ההסברים, הדוגמה הפתורה וההכנה למעבדה.
+2. **מצגות ההשתלמות:** צרפו את הקבצים הבאים בשמותיהם המדויקים. התמקדו בשקפים המצוינים; יתר שקפי המצגת אינם מרחיבים את היקף המפגש.
+
+- [4.1 Intro to linear regression.pptx](https://github.com/samiabo75/Data-Science-ML-Course/blob/main/01-Unit3-Data-Science-ML/4.1%20Intro%20to%20linear%20regression.pptx) — שקפים 7–11.
+- [4.2 Linear regression with sklearn.pptx](https://github.com/samiabo75/Data-Science-ML-Course/blob/main/01-Unit3-Data-Science-ML/4.2%20Linear%20regression%20with%20sklearn.pptx) — שקפים 7–12.
+- [Data Preparation2.pptx](https://github.com/samiabo75/Data-Science-ML-Course/blob/main/01-Unit3-Data-Science-ML/Data%20Preparation2.pptx) — שקפים 22.
+
+3. **הפרומפט:** העתיקו את הטקסט שמתחת לקו לשדה ההנחיות ליצירת המצגת. אין צורך להעלות את קובץ הפרומפט כמקור לימודי.
+
+[Student-Summary.md](./Student-Summary.md) הוא סיכום קצר לתלמיד; אפשר לצרפו כמקור נוסף, אך אינו מחליף את הסיכום המקצועי. אין להעלות את Teacher-Solution.ipynb כמקור למצגת לתלמידים.
+
+**הגבלת מקורות:** השתמשו במצגות ההשתלמות רק לצורך הנושא והשקפים שצוינו. סדר ההסבר, הדוגמה וההכנה לתרגול נקבעים לפי Presentation-Brief.md של מפגש זה. במפגשי סיכום והגנה המצגות הן לחזרה, ללא הוספת חומר חדש.
 
 ---
 צור מצגת חזותית בעברית עבור "מפגש 25 — רגרסיה משולבת וניתוח גודל הטעות" לתלמידי כיתה י׳ שהנושא חדש להם. מקור ההוראה העיקרי הוא Presentation-Brief.md. מצגות ההשתלמות המצורפות תומכות במושגים ובסגנון הקוד. הגבל את התוכן למטרות ולמעבדה של מפגש זה.
