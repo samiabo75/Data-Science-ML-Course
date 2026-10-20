@@ -1,0 +1,290 @@
+# מקור מקצועי למצגת — מפגש 22 — Pipeline ו־ Cross Validation
+**קהל: ** כיתה י׳, תלמידים חדשים בנושא. **מכסה: ** 2 שעות הוראה ותרגול ו־ 1 שעות פרויקט; יחד 135 דקות.
+המסמך מרכז את הסיפור, ההסבר, דוגמה פתורה וקוד, מטרות המעבדה והוראות ההמחשה. הוא מעבד את מצגות ההשתלמות המצורפות, ואינו מצגת שנוצרה או נבדקה ב־ NotebookLM.
+
+## מצגות מקור שנבדקו
+- [יישום מכונה לומדת.pptx](https://github.com/samiabo75/Data-Science-ML-Course/blob/main/01-Unit3-Data-Science-ML/%D7%99%D7%99%D7%A9%D7%95%D7%9D%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%9C%D7%95%D7%9E%D7%93%D7%AA.pptx) — שקפים 15–25.
+
+## גבולות התוכן
+כ־ 85% מזמן ההוראה המושגית בתכנון נשען על מושגי ההשתלמות, וכ־ 15% מוקדשים לפיגום, מניעת טעויות וגשרים להמשך. זהו יעד תכנון בקירוב, לא מדידת אחוזי העתקה. המקורות אינם מועתקים מילה במילה. הדוגמאות החדשות וההעברות מסומנות כדידקטיות. פירוש נכון ומניעת זליגה קודמים להעתקת טעות או API ישן.
+
+# מפגש 22 — Pipeline ו־ Cross Validation
+## סיפור המסגרת ושאלת הלמידה
+בהשוואת שיטות לא נרצה שמועמד אחד ייבחן בשאלות קלות ואחר בקשות. נשווה באותם קיפולים ונלמד הכנה מחדש בכל קיפול.
+
+## מה נלמד ומדוע
+CV מחלק את Train לתת־אימון ולאימות במספר מחזורים. Pipeline שומרת את ההכנה בתוך התהליך, כך שכל fit נעשה בתת־האימון המתאים. ממוצע CV משמש להשוואה ואינו Test חיצוני. לאחר הבחירה מתאימים מחדש את המתכון לכל Train.
+
+## דוגמה פתורה קטנה
+הציונים 0.8,0.9,0.7 נותנים ממוצע 0.8. אלה בדיקות בתוך תהליך הפיתוח ולא שלוש בחינות סוף עצמאיות.
+
+```python
+import numpy as np
+scores = np.array([0.8, 0.9, 0.7])
+print(scores.mean())
+```
+
+**פלט צפוי ופירוש: ** 0.8000000000000002 (עד שגיאת ייצוג מספרי). זוהי דוגמה קטנה ומוצהרת; היא אינה ציון ביצוע של פרויקט אמיתי.
+
+## הדרך לתרגול העצמאי
+תבנית Pipeline נתונה, טבלת CV ובחירת K. מסבירים כל שלב; אין צורך לשנן את התחביר מזיכרון.
+עבדו לפי הסדר: נסחו את השאלה, זהו נתונים ויחידות, בחרו כלי שכבר נלמד, כתבו ציפייה, הריצו והסבירו תוצאה ומגבלה. במשימה שאינה מובנת חוזרים למושג או לדוגמה, ולא מחפשים שורת קוד להעתקה.
+
+## תוצר לפרויקט
+מריצים ניסוי CV מצומצם בפרויקט, שומרים טבלת תוצאות ומנמקים בחירה בלי לפתוח Test.
+
+## קשר ללימודי ההמשך
+מדדים, אימות והכללה משותפים ליחידה 5 ולניסויים ב־ DL. שומרים על אותה שיטת הערכה גם כאשר המודל משתנה.
+
+## בדיקה עצמית
+מה דולף כאשר Scaler נלמד לפני CV על כל Train?
+כתבו תשובה במילים שלכם והצביעו על תא או נתון שתומך בה. אין פתרון לתרגול העצמאי במסמך התלמיד.
+
+
+## יישום מודרך מלא וקוד לדוגמה
+# מפגש 22 — Pipeline ו־ Cross Validation
+2 שעות הוראה ותרגול ו־ 1 שעות פרויקט; יחד 135 דקות.
+
+## סיפור המסגרת
+בהשוואת שיטות לא נרצה שמועמד אחד ייבחן בשאלות קלות ואחר בקשות. נשווה באותם קיפולים ונלמד הכנה מחדש בכל קיפול.
+
+## מטרות
+- להסביר קיפולי CV.
+- למקם הכנה ב־ Pipeline.
+- לבחור ולהתאים מחדש.
+
+## המושגים הנחוצים
+CV מחלק את Train לתת־אימון ולאימות במספר מחזורים. Pipeline שומרת את ההכנה בתוך התהליך, כך שכל fit נעשה בתת־האימון המתאים. ממוצע CV משמש להשוואה ואינו Test חיצוני. לאחר הבחירה מתאימים מחדש את המתכון לכל Train.
+
+## דוגמה פתורה לפני קוד
+הציונים 0.8,0.9,0.7 נותנים ממוצע 0.8. אלה בדיקות בתוך תהליך הפיתוח ולא שלוש בחינות סוף עצמאיות.
+
+```python
+import numpy as np
+scores = np.array([0.8, 0.9, 0.7])
+print(scores.mean())
+```
+
+**פלט צפוי: ** 0.8000000000000002 (עד שגיאת ייצוג מספרי)
+
+## מדוע זה חשוב?
+מדדים, אימות והכללה משותפים ליחידה 5 ולניסויים ב־ DL. שומרים על אותה שיטת הערכה גם כאשר המודל משתנה.
+
+## יישום מודרך — חלק 1
+מקור הקוד: ערכה 28 הקיימת. בהמשך עוברים לתרגול עצמאי באותו נושא.
+
+### חישוב ופירוש
+קראו את השמות והיחידות, כתבו ציפייה לפני הרצה ובדקו אותה בפלט. הסבירו מה השתנה ומה נשאר קבוע. אין צורך לשנן פקודה בלי להבין את פעולתה.
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split, StratifiedKFold, cross_validate
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, classification_report
+```
+
+### חישוב ופירוש
+קראו את השמות והיחידות, כתבו ציפייה לפני הרצה ובדקו אותה בפלט. הסבירו מה השתנה ומה נשאר קבוע. אין צורך לשנן פקודה בלי להבין את פעולתה.
+
+```python
+# ציונים דידקטיים מומצאים, לא תוצאות Penguins
+illustration = pd.DataFrame({
+    "K": [1, 7, 101],
+    "Train": [0.99, 0.92, 0.60],
+    "Validation": [0.71, 0.90, 0.58]
+})
+display(illustration)
+```
+
+### תשתית הנתונים והחלוקה
+קראו תחילה את היעד ואת שמות המאפיינים. החלוקה שומרת התאמה בין שורות X ל־ y. הפרמטר random_state מאפשר שחזור ואינו משפר דיוק בפני עצמו.
+
+```python
+url = "https://raw.githubusercontent.com/samiabo75/Data-Science-ML-Course/main/Datasets/penguins.csv"
+df = pd.read_csv(url)
+model_df = df.dropna(subset=["species"]).copy()
+features = ["flipper_length_mm","body_mass_g"]
+X = model_df[features].copy()
+y = model_df["species"].copy()
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.25, random_state=42, stratify=y
+)
+print("Outer Train:", len(X_train), "Outer Test:", len(X_test))
+display(X_train.isna().sum())
+```
+
+### חישוב ופירוש
+קראו את השמות והיחידות, כתבו ציפייה לפני הרצה ובדקו אותה בפלט. הסבירו מה השתנה ומה נשאר קבוע. אין צורך לשנן פקודה בלי להבין את פעולתה.
+
+```python
+# ההגדרות נקבעות לפני צפייה בהערכת Test
+candidates = [1, 3, 5, 15, 51]
+metric = "f1_macro"
+cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+results = []
+
+# קוד תהליך נתון: המטרה להבין מה נכנס ל-CV ומה נשאר בחוץ
+for k in candidates:
+    pipe = make_pipeline(
+        SimpleImputer(strategy="mean"),
+        StandardScaler(),
+        KNeighborsClassifier(n_neighbors=k, weights="uniform", metric="euclidean")
+    )
+    fold_results = cross_validate(
+        pipe, X_train, y_train,
+        cv=cv, scoring=metric, return_train_score=True, n_jobs=1
+    )
+    # test_score כאן הוא Validation פנימי של הקיפול, לא ה-Test החיצוני
+    results.append([
+        k,
+        fold_results["train_score"].mean(),
+        fold_results["test_score"].mean(),
+        fold_results["test_score"].std(ddof=0)
+    ])
+
+results_df = pd.DataFrame(results, columns=["K", "train_mean", "cv_mean", "cv_std"])
+display(results_df)
+```
+
+### התאמה ויישום
+זהו מה לומד פרמטרים ובאילו שורות נעשה fit. ודאו שכל הכנה שנלמדת מנתונים משתמשת באימון המתאים. לאחר מכן פירשו את הפלט במילים.
+
+```python
+# כלל שנקבע מראש: ממוצע CV הגבוה ביותר; בשוויון מדויק K הקטן יותר
+# המיון והגישה לשורה הם קטע עזר נתון
+ranked = results_df.sort_values(["cv_mean", "K"], ascending=[False, True])
+best_k = int(ranked.iloc[0]["K"])
+print("Selected K by CV only:", best_k)
+
+# מתאימים צינור חדש לכל קבוצת האימון החיצונית
+final_model = make_pipeline(
+    SimpleImputer(strategy="mean"),
+    StandardScaler(),
+    KNeighborsClassifier(n_neighbors=best_k, weights="uniform", metric="euclidean")
+)
+final_model.fit(X_train, y_train)
+```
+
+### חישוב ופירוש
+קראו את השמות והיחידות, כתבו ציפייה לפני הרצה ובדקו אותה בפלט. הסבירו מה השתנה ומה נשאר קבוע. אין צורך לשנן פקודה בלי להבין את פעולתה.
+
+```python
+# רק לאחר בחירת K והתאמה מחדש: הערכה אחת על Test החיצוני
+predictions = final_model.predict(X_test)
+test_accuracy = accuracy_score(y_test, predictions)
+labels_species = ["Adelie", "Chinstrap", "Gentoo"]
+report = classification_report(
+    y_test, predictions, labels=labels_species,
+    output_dict=True, zero_division=0
+)
+report_table = pd.DataFrame(report).T
+display(report_table.loc[labels_species, ["precision", "recall", "f1-score", "support"]])
+test_macro_f1 = report["macro avg"]["f1-score"]
+print("CV selection metric:", metric)
+print("Selected model Test macro-F1:", test_macro_f1)
+print("Selected model Test Accuracy:", test_accuracy)
+```
+
+## עצירה לפני המעבדה
+מה דולף כאשר Scaler נלמד לפני CV על כל Train?
+
+**התוצר הנדרש: ** תבנית Pipeline נתונה, טבלת CV ובחירת K. מסבירים כל שלב; אין צורך לשנן את התחביר מזיכרון.
+
+## המשימות שהמצגת חייבת להכין לקראתן
+תבנית Pipeline נתונה, טבלת CV ובחירת K. מסבירים כל שלב; אין צורך לשנן את התחביר מזיכרון.
+**מבחן התאמה: ** כל פקודה או רעיון במשימת ליבה צריכים להיות מוסברים קודם בדוגמה, או להופיע כקוד תשתית נתון. בהכנה לתרגול הציגו נתונים, תוצר וצעדי חשיבה; אין לפתור את משימת התלמיד. המעבדה המדויקת היא Student-Lab.ipynb, ופתרונה אינו מקור למצגת התלמיד.
+
+## הוראות חזותיות
+רקע לבן או בהיר מאוד, טקסט כהה, ניגודיות גבוהה וגופן גדול. רעיון מרכזי אחד בשקף. המושג יופיע לצד דוגמה קטנה, חישוב או תרשים מדויק. משתמשים בסיפור כדי להסביר את הצורך; אין להציג את נתוני הסיפור המומצאים כאילו נאספו בפועל. לתרשים נתונים אמיתי מצרפים פלט מאומת או מסמנים שהוא סכמטי. אין להמציא ציון מודל או לקרוא ציון החלטה כהסתברות.
+
+## מקורות משלימים מוגבלים
+מניעת זליגה והכנה בתוך אימות: [תיעוד scikit-learn](https://scikit-learn.org/stable/common_pitfalls.html). פירוש R²: [תיעוד המדד](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html). משתמשים רק בקטע הרלוונטי לנושא, ללא הוספת יחידת לימוד או ספרייה חדשה.
+
+
+## נספח — נוסח המעבדה העצמאית ללא פתרון
+הנספח מאפשר לבדוק שהמצגת מכינה למשימה בפועל. בחרו רק את משימות הליבה שהוגדרו במדריך. אין להפוך את הנספח לפתרון בשקפים.
+
+# מפגש 22 — Pipeline ו־Cross Validation
+2 שעות הוראה ותרגול ו־1 שעות פרויקט; יחד 135 דקות.
+
+## סיפור המסגרת
+בהשוואת שיטות לא נרצה שמועמד אחד ייבחן בשאלות קלות ואחר בקשות. נשווה באותם קיפולים ונלמד הכנה מחדש בכל קיפול.
+
+## מטרות
+- להסביר קיפולי CV.
+- למקם הכנה ב־Pipeline.
+- לבחור ולהתאים מחדש.
+
+## תרגול עצמאי
+תבנית Pipeline נתונה, טבלת CV ובחירת K. מסבירים כל שלב; אין צורך לשנן את התחביר מזיכרון.
+
+תאי משימות ריקים בכוונה. תשתית טעינה או מודל נתון, אם קיימים, אינם פתרון לחישוב ולפירוש שלכם. הפעילו רק את משימות הליבה שהוגדרו למפגש. שאר משימות המקור הן מאגר חזרה, ללא חובת בית נוספת.
+
+## חלק 1 — תרגול העברה
+הנתונים וההוראות מופיעים להלן. עובדים על משימות הליבה של המפגש.
+
+קוד ה־ Pipeline וה־ CV במודרכת הוא תבנית עבודה נתונה; אפשר להעתיקו לתאי העבודה ולנמק כל שלב. הנתונים חדשים מבחינת משימת התרגול אך אינם מאגר חדש שלא הכרנו. התאים ריקים בכוונה ואין K נדרש מראש.
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split, StratifiedKFold, cross_validate
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, classification_report
+```
+
+## 1. מסבירים ובונים חלוקה
+הסבירו מה תפקיד Train, Validation, Test ומהו K. בחרו מראש bill_length_mm, bill_depth_mm לניבוי species. חלקו test_size=0.25, random_state=17, stratify=y; אל תמלאו או תתקננו את הנתונים מראש.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**הסבר ומסקנה: ** כתבו כאן.
+
+## 2. משלימים תהליך CV
+השתמשו בתבנית הלולאה במודרכת, עם candidates=[1,3,5,15,51], scoring='f1_macro' וחמישה קיפולים משוכבים, shuffle=True, random_state=42. בכל קיפול Pipeline עם השלמת ממוצע, תקנון ו־ KNN. הציגו train_mean, cv_mean, cv_std. אילו נתונים נמסרים לפונקציית CV?
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**הסבר ומסקנה: ** כתבו כאן.
+
+## 3. בוחרים K ומנמקים
+בחרו לפי ממוצע CV הגבוה ביותר ובשוויון מדויק K הקטן יותר. כתבו נימוק מתוך הטבלה. אין לדרוש K מסוים ואין לבחור לפי ציון Train. הסבירו אם יש חשש להתאמת יתר/חסר ומה אי אפשר להסיק מהטבלה לבדה.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**הסבר ומסקנה: ** כתבו כאן.
+
+## 4. התאמה מחדש והערכה
+אמנו Pipeline חדש עם K שנבחר על כל Train החיצוני. רק עכשיו צרו תחזיות Test והציגו macro-F1, Accuracy ודוח לפי מין. אין לשנות החלטות לפי התוצאה. הסבירו מדוע זו עדיין הדגמה על נתונים מוכרים ולא מבחן בלתי תלוי חדש.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**הסבר ומסקנה: ** כתבו כאן.
+
+## 5. תיעוד והעברה לפרויקט
+כתבו כרטיס ניסוי: רשימת מועמדים, מדד, חלוקה, קיפולים, כלל הכרעה, K נבחר, דוח ומגבלה. הסבירו מה יזלוג אם נתקנן את כל X_train לפני CV, ומהו ההבדל בין cv_std לרווח סמך. הציעו חלוקה מתאימה אם כמה רשומות שייכות לאותו אדם.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**הסבר ומסקנה: ** כתבו כאן.
+
+## יישום בפרויקט
+מריצים ניסוי CV מצומצם בפרויקט, שומרים טבלת תוצאות ומנמקים בחירה בלי לפתוח Test.
+
+## לפני הגשה
+הריצו לפי הסדר, בדקו פלטים עדכניים, כתבו פירוש ומגבלה והצהירו היכן נעזרתם. פתרונות נמצאים בנפרד למורה אך גלויים במאגר הציבורי.

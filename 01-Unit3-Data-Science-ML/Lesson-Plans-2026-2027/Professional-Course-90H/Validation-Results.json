@@ -1,0 +1,472 @@
+{
+  "notebooks": [
+    {
+      "path": "Meeting-01/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 6
+    },
+    {
+      "path": "Meeting-01/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-01/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 6
+    },
+    {
+      "path": "Meeting-02/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 13
+    },
+    {
+      "path": "Meeting-02/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-02/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 10
+    },
+    {
+      "path": "Meeting-03/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 13
+    },
+    {
+      "path": "Meeting-03/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-03/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 12
+    },
+    {
+      "path": "Meeting-04/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 6
+    },
+    {
+      "path": "Meeting-04/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-04/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 5
+    },
+    {
+      "path": "Meeting-05/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 16
+    },
+    {
+      "path": "Meeting-05/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-05/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 15
+    },
+    {
+      "path": "Meeting-06/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 18
+    },
+    {
+      "path": "Meeting-06/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-06/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 22
+    },
+    {
+      "path": "Meeting-07/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 10
+    },
+    {
+      "path": "Meeting-07/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-07/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 11
+    },
+    {
+      "path": "Meeting-08/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 13
+    },
+    {
+      "path": "Meeting-08/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-08/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 12
+    },
+    {
+      "path": "Meeting-09/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-09/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-09/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-10/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 10
+    },
+    {
+      "path": "Meeting-10/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-10/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 8
+    },
+    {
+      "path": "Meeting-11/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 6
+    },
+    {
+      "path": "Meeting-11/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-11/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 5
+    },
+    {
+      "path": "Meeting-12/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 7
+    },
+    {
+      "path": "Meeting-12/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-12/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 6
+    },
+    {
+      "path": "Meeting-13/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 3
+    },
+    {
+      "path": "Meeting-13/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-13/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 3
+    },
+    {
+      "path": "Meeting-14/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 7
+    },
+    {
+      "path": "Meeting-14/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-14/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 6
+    },
+    {
+      "path": "Meeting-15/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 8
+    },
+    {
+      "path": "Meeting-15/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-15/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-16/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-16/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-16/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-17/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 7
+    },
+    {
+      "path": "Meeting-17/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-17/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 7
+    },
+    {
+      "path": "Meeting-18/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 7
+    },
+    {
+      "path": "Meeting-18/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-18/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 6
+    },
+    {
+      "path": "Meeting-19/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 10
+    },
+    {
+      "path": "Meeting-19/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-19/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 10
+    },
+    {
+      "path": "Meeting-20/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    },
+    {
+      "path": "Meeting-20/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-20/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    },
+    {
+      "path": "Meeting-21/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    },
+    {
+      "path": "Meeting-21/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-21/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    },
+    {
+      "path": "Meeting-22/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 7
+    },
+    {
+      "path": "Meeting-22/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-22/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 5
+    },
+    {
+      "path": "Meeting-23/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 5
+    },
+    {
+      "path": "Meeting-23/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-23/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-24/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 9
+    },
+    {
+      "path": "Meeting-24/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-24/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 8
+    },
+    {
+      "path": "Meeting-25/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 5
+    },
+    {
+      "path": "Meeting-25/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-25/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-26/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-26/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-26/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 3
+    },
+    {
+      "path": "Meeting-27/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 4
+    },
+    {
+      "path": "Meeting-27/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-27/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 3
+    },
+    {
+      "path": "Meeting-28/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 9
+    },
+    {
+      "path": "Meeting-28/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-28/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 8
+    },
+    {
+      "path": "Meeting-29/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    },
+    {
+      "path": "Meeting-29/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-29/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    },
+    {
+      "path": "Meeting-30/Guided-Lesson.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    },
+    {
+      "path": "Meeting-30/Student-Lab.ipynb",
+      "status": "structure_checked",
+      "code_cells": 0
+    },
+    {
+      "path": "Meeting-30/Teacher-Solution.ipynb",
+      "status": "executed",
+      "code_cells": 1
+    }
+  ],
+  "scientific_checks": {
+    "perceptron_first_pass_and_boundary": true,
+    "perceptron_training_truth_table": true,
+    "mixed_preparation_shape": true,
+    "unknown_category_policy": true,
+    "imputation_training_median": true,
+    "source_hashes_unchanged": 18,
+    "local_links_checked": 342
+  },
+  "hours": {
+    "instruction": 60,
+    "project": 30,
+    "total": 90,
+    "source_core_planned": 51,
+    "adaptation_planned": 9
+  },
+  "executed_in_colab": false,
+  "slides_generated_in_notebooklm": false
+}

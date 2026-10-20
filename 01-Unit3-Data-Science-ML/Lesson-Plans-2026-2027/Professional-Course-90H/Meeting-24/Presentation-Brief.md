@@ -1,0 +1,316 @@
+# מקור מקצועי למצגת — מפגש 24 — רגרסיה ליניארית ו־ R²
+**קהל: ** כיתה י׳, תלמידים חדשים בנושא. **מכסה: ** 2 שעות הוראה ותרגול ו־ 1 שעות פרויקט; יחד 135 דקות.
+המסמך מרכז את הסיפור, ההסבר, דוגמה פתורה וקוד, מטרות המעבדה והוראות ההמחשה. הוא מעבד את מצגות ההשתלמות המצורפות, ואינו מצגת שנוצרה או נבדקה ב־ NotebookLM.
+
+## מצגות מקור שנבדקו
+- [4.1 Intro to linear regression.pptx](https://github.com/samiabo75/Data-Science-ML-Course/blob/main/01-Unit3-Data-Science-ML/4.1%20Intro%20to%20linear%20regression.pptx) — שקפים 3–11.
+- [4.2 Linear regression with sklearn.pptx](https://github.com/samiabo75/Data-Science-ML-Course/blob/main/01-Unit3-Data-Science-ML/4.2%20Linear%20regression%20with%20sklearn.pptx) — שקפים 3–10.
+- [מדד R2 הרחבה רשות.pptx](https://github.com/samiabo75/Data-Science-ML-Course/blob/main/01-Unit3-Data-Science-ML/%D7%9E%D7%93%D7%93%20R2%20%D7%94%D7%A8%D7%97%D7%91%D7%94%20%D7%A8%D7%A9%D7%95%D7%AA.pptx) — שקפים 1–3.
+
+## גבולות התוכן
+כ־ 85% מזמן ההוראה המושגית בתכנון נשען על מושגי ההשתלמות, וכ־ 15% מוקדשים לפיגום, מניעת טעויות וגשרים להמשך. זהו יעד תכנון בקירוב, לא מדידת אחוזי העתקה. המקורות אינם מועתקים מילה במילה. הדוגמאות החדשות וההעברות מסומנות כדידקטיות. פירוש נכון ומניעת זליגה קודמים להעתקת טעות או API ישן.
+
+# מפגש 24 — רגרסיה ליניארית ו־ R²
+## סיפור המסגרת ושאלת הלמידה
+הערכת מחיר מחשב דורשת מספר, בשונה מסיווג סוג מחשב. נתחיל בישר ונקשר לדוגמת האירוס שבמצגת.
+
+## מה נלמד ומדוע
+רגרסיה חוזה יעד מספרי. במאפיין אחד ŷ=wx+b. fit לומד מקדמים ו־ predict מפיק תחזית. השארית e=y−ŷ. כאשר שונות היעד חיובית, R²=1−SSE/SST. הוא יכול להיות שלילי ואינו אחוז דיוק. ממוצע Train הוא קו בסיס מעשי, בעוד ממוצע Test מופיע בהגדרת המדד.
+
+## דוגמה פתורה קטנה
+במקור w=0.416 ו־ b=−0.366. עבור x=2.5 התחזית 0.674. אם האמת 0.7, השארית 0.026. חישוב זה אינו אימון חדש.
+
+```python
+w = 0.416
+b = -0.366
+x = 2.5
+prediction = w * x + b
+print(round(prediction, 3))
+```
+
+**פלט צפוי ופירוש: ** 0.674. זוהי דוגמה קטנה ומוצהרת; היא אינה ציון ביצוע של פרויקט אמיתי.
+
+## הדרך לתרגול העצמאי
+מאפיין אחד, אימון, תחזית, שאריות, R² וקו בסיס. אין צורך בגזירת פתרון הריבועים הפחותים.
+עבדו לפי הסדר: נסחו את השאלה, זהו נתונים ויחידות, בחרו כלי שכבר נלמד, כתבו ציפייה, הריצו והסבירו תוצאה ומגבלה. במשימה שאינה מובנת חוזרים למושג או לדוגמה, ולא מחפשים שורת קוד להעתקה.
+
+## תוצר לפרויקט
+בפרויקט רגרסיה בונים מודל ראשוני. בפרויקט סיווג מתרגלים את המעבדה כידע נדרש בלי לשנות את יעד הפרויקט.
+
+## קשר ללימודי ההמשך
+סכום משוקלל, שגיאה ועדכון משקולות מכינים ל־ DL. רגרסיה ופרספטרון אינם מוצגים כאלגוריתמי חובה ביחידה 5.
+
+## בדיקה עצמית
+האם R² שלילי הוא בהכרח שגיאת תוכנה?
+כתבו תשובה במילים שלכם והצביעו על תא או נתון שתומך בה. אין פתרון לתרגול העצמאי במסמך התלמיד.
+
+
+## יישום מודרך מלא וקוד לדוגמה
+# מפגש 24 — רגרסיה ליניארית ו־ R²
+2 שעות הוראה ותרגול ו־ 1 שעות פרויקט; יחד 135 דקות.
+
+## סיפור המסגרת
+הערכת מחיר מחשב דורשת מספר, בשונה מסיווג סוג מחשב. נתחיל בישר ונקשר לדוגמת האירוס שבמצגת.
+
+## מטרות
+- להבחין בין סיווג לרגרסיה.
+- לחשב תחזית ושארית.
+- לפרש R².
+
+## המושגים הנחוצים
+רגרסיה חוזה יעד מספרי. במאפיין אחד ŷ=wx+b. fit לומד מקדמים ו־ predict מפיק תחזית. השארית e=y−ŷ. כאשר שונות היעד חיובית, R²=1−SSE/SST. הוא יכול להיות שלילי ואינו אחוז דיוק. ממוצע Train הוא קו בסיס מעשי, בעוד ממוצע Test מופיע בהגדרת המדד.
+
+## דוגמה פתורה לפני קוד
+במקור w=0.416 ו־ b=−0.366. עבור x=2.5 התחזית 0.674. אם האמת 0.7, השארית 0.026. חישוב זה אינו אימון חדש.
+
+```python
+w = 0.416
+b = -0.366
+x = 2.5
+prediction = w * x + b
+print(round(prediction, 3))
+```
+
+**פלט צפוי: ** 0.674
+
+## מדוע זה חשוב?
+סכום משוקלל, שגיאה ועדכון משקולות מכינים ל־ DL. רגרסיה ופרספטרון אינם מוצגים כאלגוריתמי חובה ביחידה 5.
+
+## יישום מודרך — חלק 1
+מקור הקוד: ערכה 27 הקיימת. בהמשך עוברים לתרגול עצמאי באותו נושא.
+
+### חישוב ופירוש
+קראו את השמות והיחידות, כתבו ציפייה לפני הרצה ובדקו אותה בפלט. הסבירו מה השתנה ומה נשאר קבוע. אין צורך לשנן פקודה בלי להבין את פעולתה.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.dummy import DummyRegressor
+from sklearn.metrics import r2_score
+```
+
+### טעינה ובדיקת קלט
+טוענים את מקור הנתונים שהופיע בתרגול. בודקים שדות וממדים לפני שימוש. כתובת Raw שונה מדף התצוגה של GitHub.
+
+```python
+url = "https://raw.githubusercontent.com/samiabo75/Data-Science-ML-Course/main/Datasets/penguins.csv"
+df = pd.read_csv(url)
+display(df.head())
+display(df[["flipper_length_mm", "bill_length_mm", "body_mass_g"]].isna().sum())
+```
+
+### תשתית הנתונים והחלוקה
+קראו תחילה את היעד ואת שמות המאפיינים. החלוקה שומרת התאמה בין שורות X ל־ y. הפרמטר random_state מאפשר שחזור ואינו משפר דיוק בפני עצמו.
+
+```python
+# לא משלימים יעד חסר; משתמשים בעותק עבודה
+model_df = df.dropna(subset=["body_mass_g"]).copy()
+feature = "flipper_length_mm"
+X = model_df[[feature]].copy()
+y = model_df["body_mass_g"].copy()
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.25, random_state=42
+)
+training_means = X_train.mean()
+X_train_ready = X_train.fillna(training_means)
+X_test_ready = X_test.fillna(training_means)
+print("Eligible:", len(model_df), "Train:", len(X_train), "Test:", len(X_test))
+print("Train feature range:", X_train_ready[feature].min(), X_train_ready[feature].max())
+```
+
+### התאמה ויישום
+זהו מה לומד פרמטרים ובאילו שורות נעשה fit. ודאו שכל הכנה שנלמדת מנתונים משתמשת באימון המתאים. לאחר מכן פירשו את הפלט במילים.
+
+```python
+model = LinearRegression()
+model.fit(X_train_ready, y_train)
+predictions = model.predict(X_test_ready)
+w = model.coef_[0]
+b = model.intercept_
+print("Slope (g/mm):", w, "Intercept (g):", b)
+new_penguin = pd.DataFrame({feature: [200]})
+new_prediction = model.predict(new_penguin)
+print("New feature value (mm):", 200, "Predicted mass (g):", new_prediction[0])
+```
+
+### המחשה חזותית
+לפני הרצה הגדירו שאלה, סוגי משתנים ויחידות. אחרי הרצה פרשו את הצירים ואת הממצא. אין להסיק סיבתיות או למחוק קצה רק מן הציור.
+
+```python
+# קטע ציור נתון; ממיינים את X כדי לצייר ישר בלי חיבור בזיגזג
+line_X = X_train_ready.sort_values(feature)
+line_y = model.predict(line_X)
+plt.figure()
+plt.scatter(X_train_ready[feature], y_train, alpha=0.35, label="Train")
+plt.scatter(X_test_ready[feature], y_test, alpha=0.65, label="Test")
+plt.plot(line_X[feature], line_y, color="black", label="Line fitted on Train")
+plt.xlabel(feature + " (mm)")
+plt.ylabel("body_mass_g (g)")
+plt.title("Penguins — one-feature linear regression")
+plt.legend()
+plt.tight_layout()
+plt.show()
+```
+
+### המחשה חזותית
+לפני הרצה הגדירו שאלה, סוגי משתנים ויחידות. אחרי הרצה פרשו את הצירים ואת הממצא. אין להסיק סיבתיות או למחוק קצה רק מן הציור.
+
+```python
+comparison = pd.DataFrame(
+    {"actual_g": y_test, "predicted_g": predictions}, index=y_test.index
+)
+comparison["residual_g"] = comparison["actual_g"] - comparison["predicted_g"]
+display(comparison.head(8))
+plt.figure()
+plt.scatter(comparison["predicted_g"], comparison["residual_g"], alpha=0.6)
+plt.axhline(0, color="black")
+plt.xlabel("Predicted mass (g)")
+plt.ylabel("Residual: actual - predicted (g)")
+plt.title("Test residuals")
+plt.tight_layout()
+plt.show()
+```
+
+### חישוב ופירוש
+קראו את השמות והיחידות, כתבו ציפייה לפני הרצה ובדקו אותה בפלט. הסבירו מה השתנה ומה נשאר קבוע. אין צורך לשנן פקודה בלי להבין את פעולתה.
+
+```python
+# בדיקת הדוגמה הידנית בלבד, ללא אימון או CSV
+toy_actual = pd.Series([10.0, 20.0, 30.0])
+toy_predicted = pd.Series([12.0, 18.0, 30.0])
+toy_sse = ((toy_actual - toy_predicted) ** 2).sum()
+toy_sst = ((toy_actual - toy_actual.mean()) ** 2).sum()
+print("Toy SSE:", toy_sse, "SST:", toy_sst, "R²:", 1 - toy_sse / toy_sst)
+print("Poor prediction R²:", r2_score(toy_actual, [40, 40, 40]))
+```
+
+### התאמה ויישום
+זהו מה לומד פרמטרים ובאילו שורות נעשה fit. ודאו שכל הכנה שנלמדת מנתונים משתמשת באימון המתאים. לאחר מכן פירשו את הפלט במילים.
+
+```python
+# ממוצע y_test משמש רק להגדרת המדד, לא ליצירת תחזיות
+sse = (comparison["residual_g"] ** 2).sum()
+test_mean = y_test.mean()
+sst = ((y_test - test_mean) ** 2).sum()
+r2_manual = 1 - sse / sst
+r2_test = r2_score(y_test, predictions)
+print("SSE:", sse, "SST:", sst)
+print("R² manual:", r2_manual, "R² library:", r2_test)
+
+# קו בסיס מעשי: חיזוי ממוצע שנלמד מאימון בלבד
+baseline = DummyRegressor(strategy="mean")
+baseline.fit(X_train_ready, y_train)
+baseline_predictions = baseline.predict(X_test_ready)
+baseline_r2 = r2_score(y_test, baseline_predictions)
+print("Training mean baseline (g):", baseline.constant_[0, 0])
+print("Baseline R² on same Test:", baseline_r2)
+```
+
+## עצירה לפני המעבדה
+האם R² שלילי הוא בהכרח שגיאת תוכנה?
+
+**התוצר הנדרש: ** מאפיין אחד, אימון, תחזית, שאריות, R² וקו בסיס. אין צורך בגזירת פתרון הריבועים הפחותים.
+
+## המשימות שהמצגת חייבת להכין לקראתן
+מאפיין אחד, אימון, תחזית, שאריות, R² וקו בסיס. אין צורך בגזירת פתרון הריבועים הפחותים.
+**מבחן התאמה: ** כל פקודה או רעיון במשימת ליבה צריכים להיות מוסברים קודם בדוגמה, או להופיע כקוד תשתית נתון. בהכנה לתרגול הציגו נתונים, תוצר וצעדי חשיבה; אין לפתור את משימת התלמיד. המעבדה המדויקת היא Student-Lab.ipynb, ופתרונה אינו מקור למצגת התלמיד.
+
+## הוראות חזותיות
+רקע לבן או בהיר מאוד, טקסט כהה, ניגודיות גבוהה וגופן גדול. רעיון מרכזי אחד בשקף. המושג יופיע לצד דוגמה קטנה, חישוב או תרשים מדויק. משתמשים בסיפור כדי להסביר את הצורך; אין להציג את נתוני הסיפור המומצאים כאילו נאספו בפועל. לתרשים נתונים אמיתי מצרפים פלט מאומת או מסמנים שהוא סכמטי. אין להמציא ציון מודל או לקרוא ציון החלטה כהסתברות.
+
+## מקורות משלימים מוגבלים
+מניעת זליגה והכנה בתוך אימות: [תיעוד scikit-learn](https://scikit-learn.org/stable/common_pitfalls.html). פירוש R²: [תיעוד המדד](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html). משתמשים רק בקטע הרלוונטי לנושא, ללא הוספת יחידת לימוד או ספרייה חדשה.
+
+
+## נספח — נוסח המעבדה העצמאית ללא פתרון
+הנספח מאפשר לבדוק שהמצגת מכינה למשימה בפועל. בחרו רק את משימות הליבה שהוגדרו במדריך. אין להפוך את הנספח לפתרון בשקפים.
+
+# מפגש 24 — רגרסיה ליניארית ו־R²
+2 שעות הוראה ותרגול ו־1 שעות פרויקט; יחד 135 דקות.
+
+## סיפור המסגרת
+הערכת מחיר מחשב דורשת מספר, בשונה מסיווג סוג מחשב. נתחיל בישר ונקשר לדוגמת האירוס שבמצגת.
+
+## מטרות
+- להבחין בין סיווג לרגרסיה.
+- לחשב תחזית ושארית.
+- לפרש R².
+
+## תרגול עצמאי
+מאפיין אחד, אימון, תחזית, שאריות, R² וקו בסיס. אין צורך בגזירת פתרון הריבועים הפחותים.
+
+תאי משימות ריקים בכוונה. תשתית טעינה או מודל נתון, אם קיימים, אינם פתרון לחישוב ולפירוש שלכם. הפעילו רק את משימות הליבה שהוגדרו למפגש. שאר משימות המקור הן מאגר חזרה, ללא חובת בית נוספת.
+
+## חלק 1 — תרגול העברה
+הנתונים וההוראות מופיעים להלן. עובדים על משימות הליבה של המפגש.
+
+התרגול משתמש באורך מקור במקום סנפיר ובחלוקה אחרת. אין צורך לכתוב קוד ציור מאפס; מותר להיעזר בקטעים הנתונים במודרכת. תאי המשימות ריקים בכוונה. אין ציון R² נדרש מראש.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.dummy import DummyRegressor
+from sklearn.metrics import r2_score
+```
+
+```python
+url = "https://raw.githubusercontent.com/samiabo75/Data-Science-ML-Course/main/Datasets/penguins.csv"
+df = pd.read_csv(url)
+display(df.head())
+display(df[["flipper_length_mm", "bill_length_mm", "body_mass_g"]].isna().sum())
+```
+
+## 1. הגדרת חקר והכנה
+נחזה body_mass_g לפי bill_length_mm בלבד. כתבו סוג בעיה ויחידות. השאירו בעותק עבודה רק יעד ידוע; הגדירו X כטבלה ו־ y כסדרה. חלקו test_size=0.25, random_state=17 ללא stratify לפי המסה, ולמדו ממוצע השלמה מאימון בלבד.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**תיעוד ומסקנה: ** כתבו כאן.
+
+## 2. התאמת ישר ותחזית
+אמנו LinearRegression, הציגו שיפוע וחיתוך ופרשו את יחידותיהם. חזו מסה עבור אורך מקור 45 מ״מ באמצעות DataFrame בעל שם העמודה המתאים. בדקו אם 45 נמצא בטווח האימון; הסבירו מגבלה גם אם כן.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**תיעוד ומסקנה: ** כתבו כאן.
+
+## 3. תרשים ושאריות
+הציגו נקודות אימון/בדיקה וקו מותאם לאימון. צרו טבלת actual_g, predicted_g, residual_g באינדקס הבדיקה ותרשים שאריות. בחרו שתי דוגמאות ופרשו את סימן השארית ואת יחידתה.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**תיעוד ומסקנה: ** כתבו כאן.
+
+## 4. R² וקו בסיס
+חשבו SSE ו־ SST לפי ממוצע y_test, ו־ R² ביד וב־ r2_score. הסבירו מדוע שימוש בממוצע זה לצורך הגדרת מדד אינו היתר ללמוד ממנו תחזיות. אמנו DummyRegressor(strategy='mean') על האימון והשוו ב־ Test. האם קו הבסיס חייב לקבל בדיוק אפס? נמקו.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**תיעוד ומסקנה: ** כתבו כאן.
+
+## 5. פירוש ותיעוד לפרויקט
+השלימו כרטיס מודל עם התוצאות שהתקבלו, מגבלה אחת של שימוש במאפיין יחיד ואחת של הכללה. מדוע אין להשתמש ב־ Accuracy? האם R² שלילי אפשרי? אין להשוות את ציוני שתי המחברות כהוכחה לעדיפות מאפיין, כי גם החלוקה שונה.
+
+```python
+# כתבו כאן את הקוד שלכם
+```
+
+**תיעוד ומסקנה: ** כתבו כאן.
+
+## יישום בפרויקט
+בפרויקט רגרסיה בונים מודל ראשוני. בפרויקט סיווג מתרגלים את המעבדה כידע נדרש בלי לשנות את יעד הפרויקט.
+
+## לפני הגשה
+הריצו לפי הסדר, בדקו פלטים עדכניים, כתבו פירוש ומגבלה והצהירו היכן נעזרתם. פתרונות נמצאים בנפרד למורה אך גלויים במאגר הציבורי.
