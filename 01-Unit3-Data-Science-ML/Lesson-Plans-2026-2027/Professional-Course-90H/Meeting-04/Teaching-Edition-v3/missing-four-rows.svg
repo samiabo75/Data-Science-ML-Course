@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="360" viewBox="0 0 850 360" role="img" aria-label="Four first penguin rows: measured bill lengths 39.1 39.5 40.3 mm and one NA; missing rate 25 percent">
+<rect width="850" height="360" fill="#fff"/><text x="425" y="35" font-family="Arial,sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#17364e">Four real source rows: bill length (mm)</text>
+<text x="425" y="64" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" fill="#526b7c">Three recorded measurements and one missing cell</text>
+<g font-family="Arial,sans-serif" text-anchor="middle" font-size="21">
+<rect x="100" y="95" width="140" height="78" rx="7" fill="#e1eff6" stroke="#5398bc"/>
+<rect x="265" y="95" width="140" height="78" rx="7" fill="#e1eff6" stroke="#5398bc"/>
+<rect x="430" y="95" width="140" height="78" rx="7" fill="#e1eff6" stroke="#5398bc"/>
+<rect x="595" y="95" width="140" height="78" rx="7" fill="#fff0e6" stroke="#ca8055"/>
+<text x="170" y="126" font-size="14" fill="#456076">row 1</text><text x="335" y="126" font-size="14" fill="#456076">row 2</text><text x="500" y="126" font-size="14" fill="#456076">row 3</text><text x="665" y="126" font-size="14" fill="#8c4c2d">row 4</text>
+<text x="170" y="157" fill="#17364e">39.1</text><text x="335" y="157" fill="#17364e">39.5</text><text x="500" y="157" fill="#17364e">40.3</text><text x="665" y="157" fill="#9b4d29">NA</text>
+</g>
+<rect x="100" y="219" width="476" height="29" rx="4" fill="#3479ac"/><rect x="576" y="219" width="159" height="29" rx="4" fill="#cc7548"/>
+<text x="338" y="240" fill="#fff" font-size="17" font-family="Arial,sans-serif" text-anchor="middle">3 known</text><text x="655" y="240" fill="#fff" font-size="17" font-family="Arial,sans-serif" text-anchor="middle">1 NA</text>
+<text x="425" y="289" text-anchor="middle" fill="#223951" font-size="21" font-family="Arial,sans-serif">1 / 4 = 25% missing within this four-row example</text>
+<text x="425" y="325" text-anchor="middle" fill="#627588" font-size="15" font-family="Arial,sans-serif">Do not generalize 25% to all 344 rows</text>
+</svg>

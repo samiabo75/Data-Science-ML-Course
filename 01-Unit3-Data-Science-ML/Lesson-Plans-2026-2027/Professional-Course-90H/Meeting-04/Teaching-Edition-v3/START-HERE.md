@@ -1,16 +1,19 @@
-# מפגש 4 — מקור הנתונים, CSV וסקירה ראשונית
+# יחידה 3 — מפגש 4: ערכת הוראה מעמיקה לאחר בקרת איכות
 
-**מהדורת הוראה v3 • כיתה י׳ • מועמדת לבדיקה**
+**90 דקות הוראה ותרגול + 45 דקות פרויקט | כיתה י׳ | סטטוס: Content Checked / Code QA pending full Colab**
 
-1. [ספר תלמיד מפורט](Student-Book.md)
-2. [מדריך מורה מורחב](Teacher-Guide.md)
-3. [חישוב ידני מונחה](Teacher-Worked-Example.md)
-4. [מקור מקצועי למצגת](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות וסטטוס](Quality-Check.md)
+## סדר השימוש
+1. [ספר התלמיד](Student-Book.md) — הסבר סיפורי, מקור אמיתי, נוסחת שיעור חסר וממוצע ידני, קוד ומסקנות.
+2. [מדריך המורה](Teacher-Guide.md) — רצף הוראה לפי דקות, פיגומים, פתרונות וטיפול בשגיאות.
+3. [דוגמה מספרית מלאה](Teacher-Worked-Example.md) — ארבע שורות מול 344 רשומות.
+4. [מילון שדות וכרטיס מקור](Data-Dictionary-and-Provenance.md) — כולל גרסה, מקור ויחידות.
+5. [המחשת ארבע הרשומות](missing-four-rows.svg) ו[גרף שלמות המאגר](penguins-missing-by-column.svg).
+6. [מחברת הדגמה](Guided-Audited.ipynb), [מחברת תלמיד עם השלמות](Student-Fill-Blanks-Audited.ipynb) ו[פתרון מורה](Teacher-Solution-Audited.ipynb).
+7. [מקור מקצועי למצגת NotebookLM](NotebookLM-Source.md) ו[פרומפט מצגת](NotebookLM-Prompt.md).
+8. [יומן בקרת איכות](Quality-Check.md).
 
-**מחברות הליבה נשמרו:** [מחברת מודרכת](../Guided-Lesson.ipynb) · [תרגול תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb).
+**מקורות נשמרו ללא שינוי:** [מחברת מודרכת מקורית](../Guided-Lesson.ipynb), [מעבדת תלמיד מקורית](../Student-Lab.ipynb), [פתרון מורה מקור](../Teacher-Solution.ipynb), [מקור מצגת](../Presentation-Brief.md).
 
-**חומרי הליבה המקוריים נשארים מחייבים למטלות:** [מדריך המורה](../Teacher-Guide.md) · [סיכום תלמיד](../Student-Summary.md) · [מחברת מודרכת](../Guided-Lesson.ipynb) · [מעבדת תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb) · [רישום מקור ההשתלמות](../Presentation-Brief.md).
+**נתונים:** הקובץ ב־Datasets/penguins.csv (344×7) הוא מקור המעבדה, לעומת ארבע הרשומות הראשונות שמשמשות לחישוב ידני. החבילה משתמשת בחומרי ההשתלמות כעוגן, אך אינה משנה אותם.
 
-כל מהדורת v3 מוסיפה הסברים ומקשרת לתרגולים קיימים. היא אינה משנה את תוכניות השעות, חומרי ההשתלמות או מחברות המקור.
+**סטטוס:** יש עדיין לבצע Run All ב־Colab, ליצור ולהגיה מצגת, לבדוק שקפי מקור בפועל ולאסוף משוב בכיתה לפני הכינוי READY סופי.
