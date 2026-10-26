@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="455" viewBox="0 0 900 455" role="img" aria-label="Four illustrative computer prices A 2100, B 2700, C 3600, D 2400 NIS">
+<rect width="900" height="455" fill="#ffffff"/>
+<text x="450" y="35" fill="#17334a" font-family="Arial,sans-serif" font-size="24" text-anchor="middle" font-weight="bold">Four computer offers - invented data</text>
+<text x="450" y="65" fill="#536479" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">Price (NIS) by computer ID</text>
+<path d="M125 95 V365 H850" stroke="#41596e" stroke-width="2" fill="none"/>
+<g stroke="#e2e9ee" stroke-width="1"><path d="M125 305 H850 M125 245 H850 M125 185 H850 M125 125 H850"/></g>
+<g fill="#54687a" font-family="Arial,sans-serif" font-size="17" text-anchor="end">
+<text x="110" y="372">0</text><text x="110" y="312">1000</text><text x="110" y="252">2000</text><text x="110" y="192">3000</text><text x="110" y="132">4000</text>
+</g>
+<g fill="#3173ad"><rect x="205" y="239" width="105" height="126" rx="4"/><rect x="370" y="203" width="105" height="162" rx="4"/><rect x="535" y="149" width="105" height="216" rx="4"/><rect x="700" y="221" width="105" height="144" rx="4"/></g>
+<g fill="#17334a" font-family="Arial,sans-serif" font-size="20" font-weight="bold" text-anchor="middle">
+<text x="257.5" y="229">2100</text><text x="422.5" y="193">2700</text><text x="587.5" y="139">3600</text><text x="752.5" y="211">2400</text>
+</g>
+<g fill="#17334a" font-family="Arial,sans-serif" font-size="19" text-anchor="middle"><text x="257.5" y="393">A</text><text x="422.5" y="393">B</text><text x="587.5" y="393">C</text><text x="752.5" y="393">D</text></g>
+<text x="475" y="422" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" fill="#41596e">Computer ID</text>
+<text transform="translate(35,260) rotate(-90)" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" fill="#41596e">Price (NIS)</text>
+</svg>
