@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="275" viewBox="0 0 900 275" role="img" aria-label="Indexed list: index 0 value 2100, index 1 value 2700, index 2 value 3600, index 3 value 2400">
+<rect width="900" height="275" fill="#ffffff"/>
+<text x="450" y="35" fill="#18324b" font-family="Arial,sans-serif" font-size="26" text-anchor="middle" font-weight="bold">Python list: positions vs. values</text>
+<text x="450" y="65" fill="#44576a" font-family="Arial,sans-serif" font-size="17" text-anchor="middle">prices_nis = [2100, 2700, 3600, 2400]</text>
+<text x="77" y="117" font-family="Arial,sans-serif" font-size="18" fill="#314456">Index</text>
+<text x="77" y="190" font-family="Arial,sans-serif" font-size="18" fill="#314456">Value</text>
+<g font-family="Arial,sans-serif" font-size="27" text-anchor="middle">
+<rect x="185" y="83" width="145" height="58" rx="8" fill="#e3f1f7" stroke="#6fa4bf"/>
+<rect x="345" y="83" width="145" height="58" rx="8" fill="#e3f1f7" stroke="#6fa4bf"/>
+<rect x="505" y="83" width="145" height="58" rx="8" fill="#faeed7" stroke="#ce9c54"/>
+<rect x="665" y="83" width="145" height="58" rx="8" fill="#e3f1f7" stroke="#6fa4bf"/>
+<text x="257.5" y="120" fill="#18324b">0</text><text x="417.5" y="120" fill="#18324b">1</text><text x="577.5" y="120" fill="#18324b">2</text><text x="737.5" y="120" fill="#18324b">3</text>
+<rect x="185" y="153" width="145" height="58" rx="8" fill="#f2f7fb" stroke="#6fa4bf"/>
+<rect x="345" y="153" width="145" height="58" rx="8" fill="#f2f7fb" stroke="#6fa4bf"/>
+<rect x="505" y="153" width="145" height="58" rx="8" fill="#fff3df" stroke="#ce9c54"/>
+<rect x="665" y="153" width="145" height="58" rx="8" fill="#f2f7fb" stroke="#6fa4bf"/>
+<text x="257.5" y="190" fill="#18324b">2100</text><text x="417.5" y="190" fill="#18324b">2700</text><text x="577.5" y="190" fill="#18324b">3600</text><text x="737.5" y="190" fill="#18324b">2400</text>
+</g>
+<text x="450" y="247" fill="#5b6776" font-family="Arial,sans-serif" font-size="16" text-anchor="middle">prices_nis[2] returns 3600 NIS, not the number 2</text>
+</svg>
