@@ -248,3 +248,10 @@
 ## 24. בקרת עומק יחידה 3 — מפגש 5 הושלם כתוכן מבוקר (27.10.2026)
 
 [PR #8](https://github.com/samiabo75/Data-Science-ML-Course/pull/8) מוזג לענף הראשי. תיקיית Meeting-05/Teaching-Edition-v3 כוללת ספר תלמיד ומדריך מורה משוכתבים, דוגמה ידנית מלאה, 2 איורי SVG, מחברת Guided-Audited, מחברת Student-Fill-Blanks-Audited (31 השלמות תחביר קוד), פתרון Teacher-Solution-Audited (21 assert), מקור ופרומפט NotebookLM ודוח בדיקות. מהלך השיעור: סיפור→הבחנה שדות/תצפיות→Series לעומת DataFrame→נוסחת מסכה וטבלת אמת→קוד→נתוני Penguins אמיתיים→מגבלה→תכנון X/y בפרויקט. כל קובצי המקור המקבילים נשארו ללא שינוי. בדיקות נתונים דרך GitHub וקטעי Python מקומיים עברו, אך Run All ב־Colab, מצגת מוגהת ופיילוט כיתה נותרו פתוחים. הסטטוס **Candidate / Content-Checked + Representative-Code-Checked**. [יומן מעקב](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). השלב הבא הוא **מפגש 6**, ואין לשחזר את מפגשים 1–5 ללא תקלה נקודתית.
+
+
+---
+
+## 25. יחידה 3 — מפגש 6 שודרג (27.10.2026)
+
+[PR #9](https://github.com/samiabo75/Data-Science-ML-Course/pull/9) מוזג. Meeting-06/Teaching-Edition-v3 מכילה ספר תלמיד, מדריך מורה, דוגמה ידנית, שני SVG, Guided-Audited עם 15 בדיקות assert, Student-Fill-Blanks-Audited עם 54 סימני השלמה, Teacher-Solution-Audited עם 27 בדיקות assert, מקור/פרומפט NotebookLM ויומן QA. השיעור: סיפור מחשבים→שני תנאים בטווח סגור→טבלת אמת→AND עם & וסוגריים→מיון שורות שלמות→העברה ל־Penguins ול־Diamonds→מסקנה ומגבלה→45 דקות פרויקט. **פגם במקור Guided-Lesson:** קוד שמשנה מחיר בטעות ומשתנה memory_mask לא מוגדר. הישן נשמר; החדש מתוקן. בדיקות מקומיות של דוגמת המחשבים ומידע Penguins עברו; ספירות הקובץ הגדול של Diamonds, Run All ב־Colab והפקת מצגת עדיין לא אומתו. סטטוס **Candidate**, לא READY. [יומן הבקרה](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: Meeting-07 — סוגי משתנים, ספירה והתפלגות**; אין לשחזר קודמים אלא אם אותרה תקלה.
