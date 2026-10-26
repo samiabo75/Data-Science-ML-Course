@@ -227,3 +227,10 @@
 ## 21. סיום שדרוג תוכן מפגש 2 — 26.10.2026
 
 בהמשך ל־PR #4 של מפגש 1, גם מפגש 2 עבר בקרת עומק ושדרוג מקצועי ב־[PR #5](https://github.com/samiabo75/Data-Science-ML-Course/pull/5), שמוזג ל-main. ב־Meeting-02/Teaching-Edition-v3 נמצאים ספר תלמיד מפורט, מדריך מורה לפי 135 דקות, דוגמה ידנית, טבלת מעקב ל־for, איורי index-strip.svg ו־price-bars.svg, מחברת הדגמה, מחברת השלמת 20 חסרי Python ופתרון מורה עם assert, מקור ופרומפט NotebookLM. מקור Meeting-02 לא שונה. חישובים וגרף נבדקו מקומית; Colab/NotebookLM/כיתה טרם אושרו. סטטוס מדויק: Content-Checked + Representative-Code-Checked, ולא READY. [יומן העבודה](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: מפגש 3 — תנאים וטבלה ראשונה**, לפי אותו תקן הוראה; אין להמציא שעות או לעבור למפגש 4.
+
+
+---
+
+## 22. השלמת בקרת עומק למפגש 3 — 26.10.2026
+
+[PR #6](https://github.com/samiabo75/Data-Science-ML-Course/pull/6) מוזג ל־main. Meeting-03/Teaching-Edition-v3 עודכן לשיעור מלא: ספר תלמיד עם סיפור, כללי השוואה, חישוב אמת/שקר ו־for+if, תרשימי budget-offers.svg ו־dataframe-anatomy.svg, מדריך מורה ל־90 דקות הוראה + 45 דקות פרויקט, דוגמה ידנית, מחברת מודרכת, תרגול עצמאי עם 23 חסרי קוד ופתרון מורה עם 15 בדיקות assert, ומקור/פרומפט NotebookLM. המקור ההשתלמות ומחברותיו נשארו ללא שינוי. בדיקות קוד והגרף נעשו מקומית; אין טענה ל־Run All ב־Colab או למצגת שנוצרה. מעמדם של מפגשים 1–3: בקרת תוכן וקוד מייצג בלבד. [יומן בקרת האיכות](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: מפגש 4**. אין לבנות מחדש את שלושת המפגשים הקודמים אלא אם נמצאה שגיאה מסוימת.
