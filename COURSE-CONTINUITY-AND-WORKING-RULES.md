@@ -234,3 +234,10 @@
 ## 22. השלמת בקרת עומק למפגש 3 — 26.10.2026
 
 [PR #6](https://github.com/samiabo75/Data-Science-ML-Course/pull/6) מוזג ל־main. Meeting-03/Teaching-Edition-v3 עודכן לשיעור מלא: ספר תלמיד עם סיפור, כללי השוואה, חישוב אמת/שקר ו־for+if, תרשימי budget-offers.svg ו־dataframe-anatomy.svg, מדריך מורה ל־90 דקות הוראה + 45 דקות פרויקט, דוגמה ידנית, מחברת מודרכת, תרגול עצמאי עם 23 חסרי קוד ופתרון מורה עם 15 בדיקות assert, ומקור/פרומפט NotebookLM. המקור ההשתלמות ומחברותיו נשארו ללא שינוי. בדיקות קוד והגרף נעשו מקומית; אין טענה ל־Run All ב־Colab או למצגת שנוצרה. מעמדם של מפגשים 1–3: בקרת תוכן וקוד מייצג בלבד. [יומן בקרת האיכות](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: מפגש 4**. אין לבנות מחדש את שלושת המפגשים הקודמים אלא אם נמצאה שגיאה מסוימת.
+
+
+---
+
+## 23. סיום שדרוג תוכן מעמיק למפגש 4 — 26.10.2026
+
+[PR #7](https://github.com/samiabo75/Data-Science-ML-Course/pull/7) מוזג בהצלחה ל־main. ב־Meeting-04/Teaching-Edition-v3 נמצאים ספר תלמיד, מדריך מורה, פתרון מתמטי/ידני, כרטיס מקור מאומת, תרשימי missing-four-rows.svg ו־penguins-missing-by-column.svg, מחברת הדגמה, מעבדת תלמיד עם 19 השלמות קוד, פתרון מורה עם 12 assert, מקור/פרומפט NotebookLM ודוח QA. מקור Palmer Penguins ב־Datasets/penguins.csv מכיל 344 רשומות ו־7 עמודות (ספירת ידועים לשדות: 344,344,342,342,342,342,333). חישוב 25% חסרים שייך **לארבע הרשומות הראשונות בלבד**, ולא לכל המאגר; מקור ה־CSV לא שונה. בוצעה הרצה מקומית מייצגת של Pandas וגרף, אך לא Run All מלא ב־Colab או יצירת מצגת. המצב הרשמי הוא Candidate. [יומן בקרת האיכות](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא בתור: מפגש 5**, לא להקדים למפגשים אחרים ולא להתחיל שוב מן ההתחלה.
