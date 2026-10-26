@@ -220,3 +220,10 @@
 ## 20. תחילת שלב בקרת איכות מעמיקה ליחידה 3 — 26.10.2026
 
 מפגש 1 קיבל גרסת תוכן מעמיקה ומאומתת חלקית: ספר תלמיד ומדריך חדשים, גרף תואם לטבלת 12/16/9/15, מחברת מודרכת, מחברת חסרי Python לתלמיד ופתרון מורה מתועד. שינוי זה פורסם ב-main באמצעות [PR #4](https://github.com/samiabo75/Data-Science-ML-Course/pull/4). בדיקת חישובים וגרף מקומית הצליחה; **בדיקת Colab בממשק, יצירת המצגת ב-NotebookLM וניסוי בכיתה לא בוצעו**. [יומן האיכות](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md) מרכז את מצב כל 30 המפגשים. הביקורת הבאה: מפגש 2. השיטה נשארת סיפור → הבנה → נוסחה/חישוב → גרף → Python → תרגול/פתרון → מסקנה ומגבלה.
+
+
+---
+
+## 21. סיום שדרוג תוכן מפגש 2 — 26.10.2026
+
+בהמשך ל־PR #4 של מפגש 1, גם מפגש 2 עבר בקרת עומק ושדרוג מקצועי ב־[PR #5](https://github.com/samiabo75/Data-Science-ML-Course/pull/5), שמוזג ל-main. ב־Meeting-02/Teaching-Edition-v3 נמצאים ספר תלמיד מפורט, מדריך מורה לפי 135 דקות, דוגמה ידנית, טבלת מעקב ל־for, איורי index-strip.svg ו־price-bars.svg, מחברת הדגמה, מחברת השלמת 20 חסרי Python ופתרון מורה עם assert, מקור ופרומפט NotebookLM. מקור Meeting-02 לא שונה. חישובים וגרף נבדקו מקומית; Colab/NotebookLM/כיתה טרם אושרו. סטטוס מדויק: Content-Checked + Representative-Code-Checked, ולא READY. [יומן העבודה](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: מפגש 3 — תנאים וטבלה ראשונה**, לפי אותו תקן הוראה; אין להמציא שעות או לעבור למפגש 4.
