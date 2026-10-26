@@ -1,16 +1,21 @@
-# מפגש 6 — מיון, תנאים משולבים ומשימת העברה
+# מפגש 6 — מיון, AND והעברה ל־Diamonds
 
-**מהדורת הוראה v3 • כיתה י׳ • מועמדת לבדיקה**
+**כיתה י׳ · 90 דקות הוראה/תרגול + 45 דקות פרויקט · Content/Representative-Code Checked; לא READY סופי**
 
-1. [ספר תלמיד מפורט](Student-Book.md)
-2. [מדריך מורה מורחב](Teacher-Guide.md)
-3. [חישוב ידני מונחה](Teacher-Worked-Example.md)
-4. [מקור מקצועי למצגת](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות וסטטוס](Quality-Check.md)
+## סדר שימוש
+1. [ספר התלמיד המפורט](Student-Book.md) — סיפור → נוסחה → פתרון ידני → גרף → קוד → חקר.
+2. [מדריך מורה](Teacher-Guide.md) — תוכנית מדורגת ושאלות הגנה.
+3. [דוגמה ידנית ותוצאות בדוקות](Teacher-Worked-Example.md).
+4. [איור AND](and-mask-trace.svg) ו[גרף טווח/מיון](filter-sort-bars.svg).
+5. [מחברת הדגמה מתוקנת](Guided-Audited.ipynb).
+6. [מעבדת תלמיד עם השלמות](Student-Fill-Blanks-Audited.ipynb).
+7. [פתרון מורה מתועד](Teacher-Solution-Audited.ipynb).
+8. [מקור ל־NotebookLM](NotebookLM-Source.md) ו[פרומפט](NotebookLM-Prompt.md).
+9. [בקרת איכות](Quality-Check.md) ו[בקרת קוד](Local-Code-Validation.md).
 
-**מחברות הליבה נשמרו:** [מחברת מודרכת](../Guided-Lesson.ipynb) · [תרגול תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb).
+## מקורות נשמרו
+[מדריך מקורי](../Teacher-Guide.md) · [הדגמה מקורית — מכילה תקלה מתועדת](../Guided-Lesson.ipynb) · [מטלת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון מקור](../Teacher-Solution.ipynb).
 
-**חומרי הליבה המקוריים נשארים מחייבים למטלות:** [מדריך המורה](../Teacher-Guide.md) · [סיכום תלמיד](../Student-Summary.md) · [מחברת מודרכת](../Guided-Lesson.ipynb) · [מעבדת תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb) · [רישום מקור ההשתלמות](../Presentation-Brief.md).
+**שים לב:** מחברת המקור כוללת שורת השמה שגויה ומשתנה מסכה לא מוגדר. **אל תריץ אותה כפתרון המודרך**; השתמש ב־Guided-Audited החדשה. אין שינוי בקובץ המקורי.
 
-כל מהדורת v3 מוסיפה הסברים ומקשרת לתרגולים קיימים. היא אינה משנה את תוכניות השעות, חומרי ההשתלמות או מחברות המקור.
+Diamonds הוא קובץ גדול; צריך לבצע בדיקת טעינה ושלמות בקובץ בפועל בממשק Colab לפני שימוש בכיתה. בדיקות נבחרות ולא Run All מלא בוצעו כעת.
