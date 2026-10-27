@@ -26,7 +26,7 @@ def complete(source, answers):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only", type=int, choices=range(17,26))
+    parser.add_argument("--only", type=int, choices=range(17,27))
     parser.add_argument("--out", default="student-quality-run-report.json")
     args = parser.parse_args()
     course = Path(__file__).resolve().parents[1]
@@ -36,7 +36,7 @@ def main():
     original_url = "https://raw.githubusercontent.com/samiabo75/Data-Science-ML-Course/main/Datasets/penguins.csv"
     report = {"timestamp_utc":datetime.now(timezone.utc).isoformat(),"results":[]}
     failures = 0
-    for n in ([args.only] if args.only else range(17,26)):
+    for n in ([args.only] if args.only else range(17,27)):
         file = course / f"Meeting-{n}" / "Teaching-Edition-v3" / "Student-Fill-Blanks-Audited.ipynb"
         outcome = {"meeting":n,"notebook":file.name,"status":"FAIL"}
         try:
