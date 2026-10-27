@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 440" role="img" aria-label="Dataset is split into separate Train, Validation and Test roles. No records transfer between these sets.">
 <rect width="1060" height="440" fill="#ffffff"/>
 <g font-family="DejaVu Sans,Arial,sans-serif" fill="#203040" text-anchor="middle">
-<text x="530" y="43" font-size="27" font-weight="bold">Three disjoint data roles — not a transfer chain</text>
+<text x="530" y="43" font-size="27" font-weight="bold">שלוש קבוצות נפרדות — ללא העברת נתונים</text>
 <rect x="385" y="68" width="290" height="66" rx="12" fill="#f0f3f6" stroke="#697f91" stroke-width="2"/>
-<text x="530" y="109" font-size="23" font-weight="bold">DATA SPLIT</text>
+<text x="530" y="109" font-size="23" font-weight="bold">חלוקת נתונים</text>
 </g>
 <g fill="none" stroke="#516575" stroke-width="3">
 <path d="M530 134 V161 H187 V186"/>
@@ -20,15 +20,15 @@
 <rect x="722" y="190" width="300" height="150" rx="12" fill="#e0f2e3" stroke="#60966c" stroke-width="2"/>
 <g font-family="DejaVu Sans,Arial,sans-serif" text-anchor="middle" fill="#203040">
 <text x="188" y="235" font-size="27" font-weight="bold">TRAIN</text>
-<text x="188" y="275" font-size="18">Fit model and preprocessing</text>
-<text x="188" y="305" font-size="18">Learn parameters</text>
+<text x="188" y="275" font-size="18">אימון המודל והכנת נתונים</text>
+<text x="188" y="305" font-size="18">לימוד פרמטרים</text>
 <text x="530" y="235" font-size="27" font-weight="bold">VALIDATION</text>
-<text x="530" y="275" font-size="18">Compare candidate models</text>
-<text x="530" y="305" font-size="18">Choose model or K</text>
+<text x="530" y="275" font-size="18">השוואת מודלים מועמדים</text>
+<text x="530" y="305" font-size="18">בחירת מודל או K</text>
 <text x="872" y="235" font-size="27" font-weight="bold">TEST</text>
-<text x="872" y="275" font-size="18">Evaluate once at the end</text>
-<text x="872" y="305" font-size="18">Do not tune from results</text>
-<text x="530" y="388" font-size="20">Fix the split and metric before comparing models.</text>
-<text x="530" y="416" font-size="18">No preprocessing fit or model selection on held-out Test.</text>
+<text x="872" y="275" font-size="18">הערכה אחת בסיום</text>
+<text x="872" y="305" font-size="18">אין לכוונן לפי התוצאה</text>
+<text x="530" y="388" font-size="20">קובעים מראש חלוקה ומדד להשוואת המודלים.</text>
+<text x="530" y="416" font-size="18">אין ללמוד הכנה או לבחור מודל לפי Test.</text>
 </g>
 </svg>
