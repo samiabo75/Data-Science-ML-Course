@@ -18,12 +18,13 @@ from nbclient.exceptions import CellExecutionError
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only", type=int, choices=range(17, 28))
+    parser.add_argument("--only", type=int, choices=range(17, 29))
     parser.add_argument("--out", default="quality-run-report.json")
     args = parser.parse_args()
     course = Path(__file__).resolve().parents[1]
     repo = course.parents[2]
     dataset = repo / "Datasets" / "penguins.csv"
+    titanic_dataset = repo / "Datasets" / "titanic_data.csv"
     if not dataset.is_file():
         raise SystemExit(f"Missing local dataset {dataset}")
     import pandas as pd
@@ -45,7 +46,7 @@ def main():
         "dataset": str(dataset.relative_to(repo)),
         "results": [],
     }
-    numbers = [args.only] if args.only else list(range(17, 28))
+    numbers = [args.only] if args.only else list(range(17, 29))
     failed = 0
     for n in numbers:
         for kind in ("Guided-Audited.ipynb", "Teacher-Solution-Audited.ipynb"):
@@ -55,7 +56,7 @@ def main():
                 notebook = nbformat.read(file, as_version=4)
                 for cell in notebook.cells:
                     if cell.cell_type == "code":
-                        cell.source = cell.source.replace(original_url, str(dataset))
+                        cell.source = cell.source.replace(original_url, str(dataset)).replace("https://raw.githubusercontent.com/arielb30/datasets/main/titanic_data.csv", str(titanic_dataset))
                 client = NotebookClient(
                     notebook, timeout=240, kernel_name="python3", allow_errors=False,
                     resources={"metadata": {"path": str(repo)}},
