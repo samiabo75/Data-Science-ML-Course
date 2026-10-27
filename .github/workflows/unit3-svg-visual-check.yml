@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install rendering libraries
-        run: python -m pip install 'cairosvg>=2.7,<3' 'Pillow>=10,<13'
+        run: python -m pip install 'cairosvg>=2.7,<3' 'Pillow>=10,<13' 'python-bidi>=0.6,<1'
       - name: Render 13 SVG files and prepare contact sheet
         run: python 01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/scripts/render_svg_quality_gate.py
       - name: Upload visual previews and report

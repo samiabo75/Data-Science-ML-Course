@@ -9,6 +9,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 import cairosvg
+from bidi.algorithm import get_display
 from PIL import Image, ImageOps, ImageDraw
 
 BASE = Path(__file__).resolve().parents[1]
@@ -38,7 +39,15 @@ for num,names in ASSETS.items():
                 raise ValueError("Root element is not SVG")
             if not ("viewBox" in root.attrib or ("width" in root.attrib and "height" in root.attrib)):
                 raise ValueError("Missing intrinsic SVG size")
-            cairosvg.svg2png(url=str(src),write_to=str(out),output_width=960)
+            # CairoSVG lacks Unicode bidi; this transforms only the PNG preview copy.
+            # Original accessible SVG text remains in logical Hebrew Unicode order.
+            for text_node in root.iter():
+                if text_node.tag.endswith("text") and text_node.text and any(
+                    "\u0590" <= char <= "\u05FF" for char in text_node.text
+                ):
+                    text_node.text = get_display(text_node.text)
+            cairosvg.svg2png(bytestring=ET.tostring(root, encoding="utf-8"),
+                             write_to=str(out),output_width=960)
             with Image.open(out) as png:
                 if png.width<400 or png.height<150:
                     raise ValueError(f"Rendered image too small {png.size}")
