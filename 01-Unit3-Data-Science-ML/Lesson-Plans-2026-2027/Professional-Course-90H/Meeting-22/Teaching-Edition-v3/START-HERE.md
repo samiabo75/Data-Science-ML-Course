@@ -1,14 +1,20 @@
-# מפגש 22 — Pipeline ו־Cross Validation | הוראה משודרגת v3
+# מפגש 22 — Pipeline ו־Cross Validation | Teaching Edition v3
+**90 דקות הוראה ותרגול + 45 דקות פרויקט | Candidate**
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+| תוצר | פתיחה |
+|---|---|
+| ספר התלמיד | [Student-Book.md](Student-Book.md) |
+| מדריך מורה לפי דקות | [Teacher-Guide.md](Teacher-Guide.md) |
+| דוגמה ידנית ופתרון מורה | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| מחברת הדגמה עם בדיקות | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
+| מעבדת תלמיד עם השלמות | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
+| פתרון מורה עם בדיקות | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
+| מקור מצגת | [NotebookLM-Source.md](NotebookLM-Source.md) |
+| פרומפט מצגת | [NotebookLM-Prompt.md](NotebookLM-Prompt.md) |
+| תרשים קיפולים | [cv-three-folds.svg](cv-three-folds.svg) |
+| תרשים Pipeline | [pipeline-no-leakage.svg](pipeline-no-leakage.svg) |
+| דוח QA | [Quality-Check.md](Quality-Check.md) |
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
+חומרי המקור נשמרו: [Guided](../Guided-Lesson.ipynb), [Student Lab](../Student-Lab.ipynb), [Teacher Solution](../Teacher-Solution.ipynb), [מפת שקפים](../Presentation-Brief.md). ההדגמה על flipper_length_mm/body_mass_g ב־seed42; התלמיד על bill_length_mm/bill_depth_mm ב־seed17; K, מדד וקיפולים זהים לפי עוגני המקור. תוצאות Penguins ו־K הנבחר לא נחשפו בספר.
 
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
-
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+**לא READY:** Run All ב־Colab, הגהת NotebookLM, בדיקת SVG חזותית ופיילוט כיתה לא הושלמו.
