@@ -27,10 +27,17 @@ jobs:
           MPLBACKEND: Agg
         run: |
           python 01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/scripts/run_audited_notebooks.py --out quality-run-report.json
+      - name: Execute completed student notebooks
+        env:
+          MPLBACKEND: Agg
+        run: |
+          python 01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/scripts/run_completed_student_notebooks.py --out student-quality-run-report.json
       - name: Save machine-readable report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: unit3-meetings-17-23-quality
-          path: quality-run-report.json
+          path: |
+            quality-run-report.json
+            student-quality-run-report.json
           if-no-files-found: warn
