@@ -388,5 +388,51 @@
       "\"macro\"",
       "\"macro\""
     ]
+  ],
+  "24": [
+    [
+      "0.416",
+      "2.5",
+      "-0.366",
+      "0.7"
+    ],
+    [],
+    [
+      "\"body_mass_g\"",
+      "\"bill_length_mm\"",
+      "\"body_mass_g\"",
+      "0.25",
+      "17"
+    ],
+    [
+      "mean",
+      "fillna",
+      "fillna"
+    ],
+    [
+      "LinearRegression",
+      "fit",
+      "predict",
+      "45"
+    ],
+    [
+      "feature",
+      "\"actual_g\"",
+      "\"predicted_g\""
+    ],
+    [
+      "sum",
+      "sum",
+      "sse",
+      "sst",
+      "y_test",
+      "predictions"
+    ],
+    [
+      "\"mean\"",
+      "X_train_ready",
+      "y_train",
+      "X_test_ready"
+    ]
   ]
 }
