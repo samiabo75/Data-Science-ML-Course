@@ -1,14 +1,18 @@
-# מפגש 21 — הכללה, התאמת יתר וחלוקת אימות | הוראה משודרגת v3
+# מפגש 21 — הכללה, התאמת יתר וחלוקת אימות | Teaching Edition v3
+**90 דקות הוראה ותרגול + 45 דקות פרויקט | Candidate**
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+| תוצר | פתיחה |
+|---|---|
+| ספר תלמיד עם סיפור, חישוב ידני וקוד | [ספר התלמיד](Student-Book.md) |
+| מדריך מורה עם זמנים וסוקרטיקה | [מדריך המורה](Teacher-Guide.md) |
+| דוגמה פתורה למורה | [פתרון ידני](Teacher-Worked-Example.md) |
+| מחברת הדגמה עם בדיקות | [מחברת מודרכת Audited](Guided-Audited.ipynb) |
+| מחברת תלמיד עם השלמות קוד אמיתיות | [מעבדת תלמיד Audited](Student-Fill-Blanks-Audited.ipynb) |
+| מחברת פתרון מורה עם בדיקות | [פתרון מלא Audited](Teacher-Solution-Audited.ipynb) |
+| מקור ופרומפט NotebookLM | [מקור](NotebookLM-Source.md) · [פרומפט](NotebookLM-Prompt.md) |
+| המחשות | [תוצאות שלושה מועמדים](train-validation-candidates.svg) · [חלוקת Train/Validation/Test](train-validation-test-flow.svg) |
+| בקרת איכות | [דוח איכות](Quality-Check.md) |
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
+**חומרי המקור לא שונו:** [Guided](../Guided-Lesson.ipynb) · [Student Lab](../Student-Lab.ipynb) · [Teacher Solution](../Teacher-Solution.ipynb) · [מפת השקפים](../Presentation-Brief.md). במחברת התלמיד החדשה יש השלמות `???` מכוונות, ולא פתרונות גלויים. כל המספרים בדוגמה מומצאים, ואינם ציוני מודל KNN שהורץ.
 
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
-
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+**סטטוס:** בקרה אריתמטית מקומית על דוגמה מייצגת עברה; Run All Colab, הגהת מצגת, בדיקה חזותית וניסוי כיתה פתוחים.
