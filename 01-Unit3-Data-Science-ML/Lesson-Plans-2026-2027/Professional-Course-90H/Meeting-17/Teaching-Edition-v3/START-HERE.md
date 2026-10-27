@@ -1,14 +1,17 @@
-# מפגש 17 — KNN בספרייה: אימון וחיזוי | הוראה משודרגת v3
+# יחידה 3 — מפגש 17: KNN בספרייה — אימון, חיזוי והערכה
+**מהדורת עומק Teaching-Edition-v3 · כיתה י׳ · 90 דקות הוראה ותרגול + 45 דקות פרויקט**
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+## סדר עבודה
+1. [ספר התלמיד](Student-Book.md) — סיפור, אמת מול חיזוי, Accuracy ידני, Penguins, חלוקת Train/Test, הכנה ללא דליפה, KNN, טעויות.
+2. [מדריך המורה לפי דקות](Teacher-Guide.md) ו[פתרון ידני ומפתח למורה](Teacher-Worked-Example.md).
+3. [מחברת הדגמה](Guided-Audited.ipynb) — flipper_length_mm/body_mass_g, seed42; [מעבדת תלמיד עם השלמות](Student-Fill-Blanks-Audited.ipynb) — bill_length_mm/bill_depth_mm, seed17; [פתרון מורה עם בדיקות](Teacher-Solution-Audited.ipynb).
+4. [דיוק בארבע תצפיות מומצאות](accuracy-four-observations.svg), [תרשים Train/Test והערכה](knn-train-test-evaluation.svg), [בדיקת שגיאות סכמטית](error-inspection-table.svg).
+5. [מקור מקצועי ל־NotebookLM](NotebookLM-Source.md) ו[פרומפט ל־10 שקפים](NotebookLM-Prompt.md).
+6. [דוח בקרת איכות](Quality-Check.md) ו[דוח בדיקות קוד מקומיות](Local-Code-Validation.md).
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
+## מקורות ההשתלמות — לא שונו
+[Guided מקורית](../Guided-Lesson.ipynb) · [מעבדת מקור](../Student-Lab.ipynb) · [פתרון מקור](../Teacher-Solution.ipynb) · [מדריך מקור](../Teacher-Guide.md) · [מפת שקפים](../Presentation-Brief.md).
 
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
+**הדגמה אינה פתרון תלמיד:** משימות המקור עם שני זוגות תכונות ושני Seeds נשמרו. בכל מסלול משלימים חסרים ומתקננים מתוך Train בלבד; K3 נקבע מראש. לא בוחרים K או תכונות לפי Test, ולא מתייחסים לטבלת שגיאות סכמטית כאל תוצאות Penguins.
 
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+**סטטוס Candidate:** נתוני CSV אומתו במקור וקוד מייצג נבדק מקומית; עדיין נדרשים Run All מלא בקובצי המחברות ב־Colab, בדיקה חזותית/הגהה של NotebookLM, פיילוט כיתה והצלבה למפרט הרשמי לפני READY.
