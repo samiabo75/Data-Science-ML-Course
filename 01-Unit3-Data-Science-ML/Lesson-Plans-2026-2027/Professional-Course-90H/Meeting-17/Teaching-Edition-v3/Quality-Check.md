@@ -29,3 +29,6 @@
 7. אף מסקנה אינה מפרשת את הציון כבחירה של K או כביצוע מובטח בטבע.
 
 **זהו Candidate, לא חבילת READY לשימוש בלי ביקורת.**
+
+## עדכון מאומת — 27.10.2026
+מפגש 17 כבר עבר שדרוג עומק ונמצא ב־main. הממצאים הישנים שלפיהם Run All פתוח הם היסטוריים: [GitHub Actions 40584347441](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40584347441) הסתיים SUCCESS, **90/90 מחברות Audited** בכלל מפגשים 1–30, כולל מפגש 17 ומעבדות תלמיד שמולאו זמנית רק לבדיקה. מחברות התלמיד נשמרו עם חסרים מכוונים. הבדיקה היא GitHub CI, **לא** Run All ידני בממשק Colab. הפרדה נשמרה: מורה flipper_length_mm/body_mass_g, seed42; תלמיד bill_length_mm/bill_depth_mm, seed17. אין להציג ציוני תלמיד במצגת. 30 מקורות ופרומפטים ל־NotebookLM עברו ביקורת מסמכים, אך אין הוכחה שהופקו מצגות. **Content-Checked + Code-Checked; Presentation and Class Pilot Pending — NOT READY.** ממשיכים להפקת מצגת 1 ולבדיקתה חזותית.
