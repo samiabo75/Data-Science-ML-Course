@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Execute all teacher-facing Meeting 17-23 Audited notebooks with local Penguins CSV.
+"""Execute all teacher-facing Meeting 17-24 Audited notebooks with local Penguins CSV.
 
 Usage: python scripts/run_audited_notebooks.py [--only 23] [--out quality-run-report.json]
 This is a reproducible quality gate; it never executes incomplete student blanks.
@@ -18,7 +18,7 @@ from nbclient.exceptions import CellExecutionError
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only", type=int, choices=range(17, 24))
+    parser.add_argument("--only", type=int, choices=range(17, 25))
     parser.add_argument("--out", default="quality-run-report.json")
     args = parser.parse_args()
     course = Path(__file__).resolve().parents[1]
@@ -45,7 +45,7 @@ def main():
         "dataset": str(dataset.relative_to(repo)),
         "results": [],
     }
-    numbers = [args.only] if args.only else list(range(17, 24))
+    numbers = [args.only] if args.only else list(range(17, 25))
     failed = 0
     for n in numbers:
         for kind in ("Guided-Audited.ipynb", "Teacher-Solution-Audited.ipynb"):
