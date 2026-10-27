@@ -103,3 +103,10 @@
 ## בקרת עומק יחידה 3 — מפגש 6 (27.10.2026)
 
 **מפגש 6 — מיון, AND והעברה ל־Diamonds — מוזג ל־main ב־[PR #9](https://github.com/samiabo75/Data-Science-ML-Course/pull/9).** ספר ומדריך שוכתבו, נוצרו 2 SVG, 3 מחברות Audited, מקור/פרומפט NotebookLM, פתרון ידני ודוח בקרה. אותרה תקלה אמיתית במחברת המקור: השמה לעמודת price_nis במקום השוואה ומשתנה memory_mask לא מוגדר; המקור נשמר ללא שינוי וההדגמה החדשה מתוקנת. נתוני Penguins אומתו (Adelie 152; סנפיר≥190:265; AND:86; אורך מקור 40–45 כולל:77). בדיקת Pandas מקומית של מסכות ומיון וגרף עברה. **לא** אומתו כל פלטי Diamonds מהקובץ הגדול, ולא בוצעו Run All מלא ב־Colab או מצגת NotebookLM מוגהת. [יומן איכות](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: מפגש 7 — סוגי משתנים, ספירה והתפלגות** לפי הרצף הרשמי של המאגר.
+
+
+---
+
+## יחידה 3 — בקרת עומק למפגש 7 (27.10.2026)
+
+**מפגש 7 — סוגי משתנים, שכיחויות והתפלגויות — שודרג ומוזג ל־main ב־[PR #10](https://github.com/samiabo75/Data-Science-ML-Course/pull/10).** 14 רכיבי Teaching-Edition-v3 אומתו: ספר תלמיד ומדריך מורה מפורטים, דוגמה מתמטית ידנית, 3 SVG מדויקים, מחברת Guided חדשה עם 8 assert, מחברת Student-Fill-Blanks עם 33 השלמות, פתרון Teacher עם 16 assert, מקור/פרומפט NotebookLM ודוחות איכות. נתוני Penguins אומתו: 344×7; איים בכלל המאגר 168/124/52 ובקרב Adelie ‏44/56/52; אורכי סנפיר ידועים 342. בדיקות Pandas/NumPy מקומיות עברו. **טרם בוצעו Run All מלא ב־Colab, מצגת NotebookLM מוגהת או ניסוי בכיתה**, ולכן הסטטוס אינו READY. [יומן הבקרה](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: מפגש 8 — מרכז, פיזור והיכרות עם נורמלית.**

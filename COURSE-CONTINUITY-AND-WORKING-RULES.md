@@ -255,3 +255,10 @@
 ## 25. יחידה 3 — מפגש 6 שודרג (27.10.2026)
 
 [PR #9](https://github.com/samiabo75/Data-Science-ML-Course/pull/9) מוזג. Meeting-06/Teaching-Edition-v3 מכילה ספר תלמיד, מדריך מורה, דוגמה ידנית, שני SVG, Guided-Audited עם 15 בדיקות assert, Student-Fill-Blanks-Audited עם 54 סימני השלמה, Teacher-Solution-Audited עם 27 בדיקות assert, מקור/פרומפט NotebookLM ויומן QA. השיעור: סיפור מחשבים→שני תנאים בטווח סגור→טבלת אמת→AND עם & וסוגריים→מיון שורות שלמות→העברה ל־Penguins ול־Diamonds→מסקנה ומגבלה→45 דקות פרויקט. **פגם במקור Guided-Lesson:** קוד שמשנה מחיר בטעות ומשתנה memory_mask לא מוגדר. הישן נשמר; החדש מתוקן. בדיקות מקומיות של דוגמת המחשבים ומידע Penguins עברו; ספירות הקובץ הגדול של Diamonds, Run All ב־Colab והפקת מצגת עדיין לא אומתו. סטטוס **Candidate**, לא READY. [יומן הבקרה](./01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/V3-QUALITY-GATE-PROGRESS.md). **הבא: Meeting-07 — סוגי משתנים, ספירה והתפלגות**; אין לשחזר קודמים אלא אם אותרה תקלה.
+
+
+---
+
+## 26. בקרת עומק יחידה 3 — מפגש 7 (27.10.2026)
+
+[PR #10](https://github.com/samiabo75/Data-Science-ML-Course/pull/10) מוזג לענף הראשי. ב־Meeting-07/Teaching-Edition-v3: ספר תלמיד, מדריך מורה, דף חישוב ידני, club-categories.svg, histogram-bins-comparison.svg, penguins-islands-comparison.svg (למורה בלבד כדי למנוע חשיפת פתרון), Guided-Audited.ipynb, Student-Fill-Blanks-Audited.ipynb, Teacher-Solution-Audited.ipynb, מקור/פרומפט NotebookLM ודוחות QA. נתוני CSV Penguins אומתו מן המקור; הרצת Python מקומית לתצפיות הדגמה עברה. אין לבלבל בין ספירות באוכלוסיות תצפיות שונות או בין bins שונים לבין שינוי בנתונים. **לא נערך Run All מלא במחברות Colab, לא נוצרה מצגת ולא בוצעה התנסות כיתה; סטטוס Candidate בלבד.** השיעור הבא ברצף: **מפגש 8 — מרכז, פיזור והיכרות עם נורמלית**. אין לשחזר מפגשים 1–7 אלא אם נמצאה תקלה נקודתית.
