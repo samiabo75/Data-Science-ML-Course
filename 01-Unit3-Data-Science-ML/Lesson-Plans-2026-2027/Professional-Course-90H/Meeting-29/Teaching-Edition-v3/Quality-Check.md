@@ -15,3 +15,6 @@
 CI מריץ רק את תבניות מפגש 29 ואת יתר המחברות Audited במפגשים 17–28. גם אם 39/39 יעברו, **אין בכך ראיה למחברות הפרויקטים האישיות**, והן חייבות בדיקת Run All, מקור, רישוי והסבר מורה־תלמיד בנפרד.
 
 סטטוס מצגת NotebookLM ופיילוט כיתה נשאר Pending עד סיום המסלול.
+
+## ראיית בדיקה אמיתית — 27.10.2026
+[GitHub Actions run 40570635952](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40570635952) הסתיים בהצלחה: Guided-Audited PASS; Teacher-Solution-Audited PASS; Student-Fill-Blanks-Audited לאחר השלמת 6 מקומות קוד PASS. כל מפגשים 17–29: **26/26 מחברות מורה והדגמה + 13/13 תבניות תלמיד בתצורת פתרון = 39/39 PASS**. [PR #49](https://github.com/samiabo75/Data-Science-ML-Course/pull/49) מוזג ל־main. **תחום הבדיקה מוגבל לתבניות הקורס**; אין זו בדיקה או אישור של מחברות הפרויקטים האישיות של התלמידים. מצגות ופיילוט נשארים לסוף.
