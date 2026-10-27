@@ -1,14 +1,17 @@
-# מפגש 20 — חוסר איזון וקו בסיס | הוראה משודרגת v3
+# מפגש 20 — חוסר איזון וקו בסיס | Teaching Edition v3
+**90 דקות לימוד ותרגול + 45 דקות פרויקט. סטטוס Candidate.**
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+| תוצר | פתיחה |
+|---|---|
+| ספר תלמיד עם סיפור, נוסחאות וחישוב ידני | [ספר התלמיד](Student-Book.md) |
+| מדריך מורה לפי דקות | [מדריך המורה](Teacher-Guide.md) |
+| פתרון ידני לדוגמת המורה | [פתרון המורה](Teacher-Worked-Example.md) |
+| מחברת הדגמה מקורית | [מחברת מודרכת](../Guided-Lesson.ipynb) |
+| מעבדת תלמיד מקורית | [מעבדת תלמיד](../Student-Lab.ipynb) |
+| פתרון מעבדה למורה | [פתרון מלא](../Teacher-Solution.ipynb) |
+| מקור מקצועי למצגת | [מקור NotebookLM](NotebookLM-Source.md) |
+| פרומפט למצגת | [פרומפט](NotebookLM-Prompt.md) |
+| שתי המחשות | [מחלקות 95/5](imbalance-95-5.svg) · [Accuracy/Recall](baseline-accuracy-vs-recall.svg) |
+| בקרת איכות | [Quality Check](Quality-Check.md) |
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
-
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
-
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+**הפרדת עוגנים:** המורה מדגים 95/5, והתלמיד פותר 90/10 ומשווה למסנן אחר. שלוש המחברות מקוריות, לא מחברות Audited חדשות. טרם בוצעו Run All Colab, הגהת NotebookLM ופיילוט כיתה.
