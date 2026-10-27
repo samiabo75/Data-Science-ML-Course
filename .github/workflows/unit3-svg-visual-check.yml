@@ -1,0 +1,28 @@
+name: Unit3 Meetings 17-23 SVG render gate
+on:
+  pull_request:
+    paths:
+      - '01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/Meeting-*/Teaching-Edition-v3/*.svg'
+      - '01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/scripts/render_svg_quality_gate.py'
+      - '.github/workflows/unit3-svg-visual-check.yml'
+  workflow_dispatch:
+jobs:
+  rasterize-svg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install rendering libraries
+        run: python -m pip install 'cairosvg>=2.7,<3' 'Pillow>=10,<13'
+      - name: Render 13 SVG files and prepare contact sheet
+        run: python 01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/scripts/render_svg_quality_gate.py
+      - name: Upload visual previews and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit3-svg-previews-and-validation
+          path: 01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/svg-render-output/
+          if-no-files-found: warn
