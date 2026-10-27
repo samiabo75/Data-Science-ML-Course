@@ -1,16 +1,24 @@
-# מפגש 7 — סוגי משתנים, ספירה והתפלגות
+# מפגש 7 — כניסה לערכה המשודרגת
+**כיתה י׳ | יחידה 3 | 90 דקות הוראה/תרגול + 45 דקות פרויקט | Candidate, לא READY סופי**
 
-**מהדורת הוראה v3 • כיתה י׳ • מועמדת לבדיקה**
+## סדר שימוש
+1. [ספר התלמיד המפורט](Student-Book.md): סיפור, סוג משתנה, שכיחות, פתרון ידני, גרף, קוד ומגבלה.
+2. [מדריך המורה](Teacher-Guide.md): תכנון דקות, שאלות, פתרונות והגנה מפני טעויות.
+3. [פתרון ידני ותוצאות בדוקות](Teacher-Worked-Example.md): שני חישובים ומספרים אמיתיים מן המאגר.
+4. [גרף ספירת פעילות](club-categories.svg), [השוואת bins](histogram-bins-comparison.svg) — לתלמידים; [גרף האיים המאומת](penguins-islands-comparison.svg) — **למורה בלבד, חושף תוצאות מעבדה**.
+5. [מחברת מודרכת](Guided-Audited.ipynb) — הדגמה נפרדת ממטלת Penguins.
+6. [מעבדת תלמיד עם השלמות](Student-Fill-Blanks-Audited.ipynb) — שתי מטלות המקור, ללא פתרון.
+7. [פתרון מורה מאומת חלקית](Teacher-Solution-Audited.ipynb).
+8. [מקור המצגת](NotebookLM-Source.md) ו[פרומפט NotebookLM](NotebookLM-Prompt.md).
+9. [בקרת איכות](Quality-Check.md) ו[דוח בדיקות](Local-Code-Validation.md).
 
-1. [ספר תלמיד מפורט](Student-Book.md)
-2. [מדריך מורה מורחב](Teacher-Guide.md)
-3. [חישוב ידני מונחה](Teacher-Worked-Example.md)
-4. [מקור מקצועי למצגת](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות וסטטוס](Quality-Check.md)
+**חומרי ההשתלמות המקוריים ללא שינוי:** [מדריך](../Teacher-Guide.md), [מחברת מודרכת](../Guided-Lesson.ipynb), [מעבדה מקורית](../Student-Lab.ipynb), [פתרון המקור](../Teacher-Solution.ipynb), [רישום מצגות](../Presentation-Brief.md).
 
-**מחברות הליבה נשמרו:** [מחברת מודרכת](../Guided-Lesson.ipynb) · [תרגול תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb).
+## כלים נלווים להוראה
+- [Google Colab](https://colab.research.google.com/) — הרצת מחברות, תיעוד פלט וגרפים.
+- [Pandas](https://pandas.pydata.org/docs/) — ספירת שדות, סינון וטעינת CSV.
+- [Seaborn](https://seaborn.pydata.org/) — Countplot ו־Histplot עם תוויות צירים.
+- [NotebookLM](https://notebooklm.google.com/) — מצגת קצרה מתוך מקור/פרומפט, עם בקרת הגהה לפני הקרנה.
+- [GitHub](https://github.com/samiabo75/Data-Science-ML-Course) — תיעוד גרסה, חומרי המקור והגשות.
 
-**חומרי הליבה המקוריים נשארים מחייבים למטלות:** [מדריך המורה](../Teacher-Guide.md) · [סיכום תלמיד](../Student-Summary.md) · [מחברת מודרכת](../Guided-Lesson.ipynb) · [מעבדת תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb) · [רישום מקור ההשתלמות](../Presentation-Brief.md).
-
-כל מהדורת v3 מוסיפה הסברים ומקשרת לתרגולים קיימים. היא אינה משנה את תוכניות השעות, חומרי ההשתלמות או מחברות המקור.
+**בדיקות פתוחות לפני READY:** Run All מלא ב־Colab, יצירת מצגת והגהתה, צפייה בשקפי ההשתלמות, ניסוי בכיתה ובקרה מול מפרט ההערכה התקף.
