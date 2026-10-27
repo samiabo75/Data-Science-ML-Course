@@ -1,14 +1,20 @@
-# מפגש 29 — כתיבת דוח, שחזור והכנה להגנה | הוראה משודרגת v3
+# מפגש 29 — כתיבת דוח, שחזור והכנה להגנה | Teaching Edition v3
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+**90 דקות הוראה ותרגול + 45 דקות פרויקט. מצב Candidate עד בדיקת מחברת הפרויקט של התלמיד בפועל.**
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
+| תוצר | קישור |
+|---|---|
+| ספר תלמיד | [Student-Book.md](Student-Book.md) |
+| מדריך מורה | [Teacher-Guide.md](Teacher-Guide.md) |
+| דוגמה ועקרונות בקרה | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| הדגמת מורה מבוקרת | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
+| מחברת ביקורת לפרויקט התלמיד | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
+| פתרון/מחוון מורה | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
+| מקור ופרומפט NotebookLM | [NotebookLM-Source.md](NotebookLM-Source.md) · [NotebookLM-Prompt.md](NotebookLM-Prompt.md) |
+| שער בקרה | [Quality-Check.md](Quality-Check.md) |
 
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
+זהו מפגש ייחודי: **אין מודל חדש ואין ציון מספרי זהה לכל תלמיד.** עבודת הליבה היא מחברת הפרויקט האישית. מחברת ה־Audited לתלמיד היא תבנית לאיסוף ראיות ולבדיקת סדר ולא תחליף ל־Restart & Run All על הפרויקט עצמו.
 
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+חומרי המקור נשמרו ללא שינוי: [Guided-Lesson](../Guided-Lesson.ipynb) · [Student-Lab](../Student-Lab.ipynb) · [Teacher-Solution](../Teacher-Solution.ipynb). אין תיקייה כפולה.
+
+הגהה של מצגות NotebookLM ופיילוט כיתה נשמרים לסיום המסלול.

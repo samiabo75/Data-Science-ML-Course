@@ -1,4 +1,4 @@
-name: Unit3 Meetings 17-28 notebook execution
+name: Unit3 Meetings 17-29 notebook execution
 on:
   pull_request:
     paths:
@@ -36,7 +36,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: unit3-meetings-17-28-quality
+          name: unit3-meetings-17-29-quality
           path: |
             quality-run-report.json
             student-quality-run-report.json
