@@ -40,3 +40,8 @@ predict(X_test,y_test) אינו שימוש תקין; מילוי חסרים מכ�
 
 ## כלים מותאמים
 Colab https://colab.research.google.com/ לתרגול; NotebookLM https://notebooklm.google.com/ למצגת; תיעוד Sklearn https://scikit-learn.org/stable/modules/neighbors.html למורה; Pandas https://pandas.pydata.org/docs/ לתיעוד אינדקס. חובה בדיקת Run All מלאה, הגהת מצגת, פיילוט כיתה ובקרת מפרט רשמי לפני READY.
+
+## תוספת עומק למורה — תוצאות אמיתיות על Penguins (27.10.2026)
+בבדיקה מקומית על CSV הזהה בדיוק לקובץ המאגר (Git blob b5093336d83d99d8835c606b455d00065ab7cdcf) עברו שתי זרימות KNN המשלבות Train-only imputation, StandardScaler ו־K3. בהדגמת flipper_length_mm/body_mass_g עם seed42 נמצאו **60 נכונות מתוך 86, כלומר 69.77%**. בפתרון מטלת bill_length_mm/bill_depth_mm עם seed17 נמצאו **83 נכונות מתוך 86, כלומר 96.51%**. שלוש הטעויות במטלת התלמיד הן באינדקסי מקור 129, 325 ו־335 — כל אחת ניתנת לשליפה באמצעות X_test.loc[errors.index].
+
+**הוראה דידקטית:** אין להציג מספרים אלה מראש במצגת תלמיד, ואין להשוות בין שני המסלולים כדי לבחור "מאפיינים טובים יותר": השתנו גם המאפיינים וגם חלוקת Train/Test. תנו לתלמידים לחזות, להריץ ולנתח שגיאה בפלט שלהם. דוח למורה בלבד וקוד משחזר: [Real-Penguins-Validation-Teacher.md](Real-Penguins-Validation-Teacher.md) · [Verify-Real-Penguins.py](Verify-Real-Penguins.py). עדיין יש לבצע Run All של המחברות עצמן ב־Colab לפני READY.

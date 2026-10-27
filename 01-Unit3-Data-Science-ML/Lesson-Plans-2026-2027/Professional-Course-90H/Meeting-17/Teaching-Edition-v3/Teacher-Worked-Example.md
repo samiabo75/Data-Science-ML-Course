@@ -26,3 +26,10 @@ errors = comparison[comparison["correct"] == False] מציג רשומות שבה
 
 ## שאלות הגנה
 מדוע StandardScaler נלמד רק מ־Train? מה נלמד ב־fit של KNN? מה ההבדל בין תווית חיזוי ליעד אמת? מהו המכנה בנוסחת Accuracy? מהי מגבלת ההכללה לחלוקות אחרות ולאוכלוסייה? למה אין לשנות K לאחר התבוננות בתוצאה של Test?
+
+## הרחבת פתרון מורה — תוצאות אמיתיות ושגיאות מקובץ המאגר
+נבדק קובץ Penguins האמיתי (344×7, Git blob b5093336d83d99d8835c606b455d00065ab7cdcf). ב־Python עם Scikit-learn 1.8.0, Pipelines השיעור הובילו לתוצאות הבאות:
+- מורה: flipper_length_mm/body_mass_g, seed=42, ‏**60/86 נכונות, 26 טעויות, Accuracy≈0.69767442**. שלוש טעויות מקור ראשונות: אינדקס 151 (Adelie→Chinstrap), ‏298 (Chinstrap→Adelie), ‏121 (Adelie→Chinstrap).
+- תלמיד: bill_length_mm/bill_depth_mm, seed=17, ‏**83/86 נכונות, 3 טעויות, Accuracy≈0.96511628**. שלוש הטעויות: אינדקס 129 (Adelie→Chinstrap), ‏325 (Chinstrap→Gentoo), ‏335 (Chinstrap→Adelie).
+- אין להציג את ההפרש כראיה לבחירת תכונות, שכן גם random_state שונה ונעשה שימוש בשתי קבוצות Test שונות. אין לכוון K לפי נתוני Test.
+- [דוח מלא למורה](Real-Penguins-Validation-Teacher.md) · [קוד שחזור](Verify-Real-Penguins.py). **זהו חישוב מקומי על CSV האמיתי, לא Run All של קובצי המחברות עצמם ב־Colab.**
