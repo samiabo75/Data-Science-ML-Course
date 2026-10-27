@@ -64,7 +64,7 @@
       "barplot",
       "\"island\"",
       "\"flipper_length_mm\"",
-      "\"mean\""
+      "sum"
     ],
     [
       "shape",
