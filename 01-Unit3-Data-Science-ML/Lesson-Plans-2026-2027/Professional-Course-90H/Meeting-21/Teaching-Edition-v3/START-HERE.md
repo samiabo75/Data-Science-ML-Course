@@ -1,18 +1,19 @@
 # מפגש 21 — הכללה, התאמת יתר וחלוקת אימות | Teaching Edition v3
-**90 דקות הוראה ותרגול + 45 דקות פרויקט | Candidate**
+**כיתה י׳ · 90 דקות הוראה ותרגול + 45 דקות פרויקט · Candidate**
 
 | תוצר | פתיחה |
 |---|---|
-| ספר תלמיד עם סיפור, חישוב ידני וקוד | [ספר התלמיד](Student-Book.md) |
-| מדריך מורה עם זמנים וסוקרטיקה | [מדריך המורה](Teacher-Guide.md) |
-| דוגמה פתורה למורה | [פתרון ידני](Teacher-Worked-Example.md) |
-| מחברת הדגמה עם בדיקות | [מחברת מודרכת Audited](Guided-Audited.ipynb) |
-| מחברת תלמיד עם השלמות קוד אמיתיות | [מעבדת תלמיד Audited](Student-Fill-Blanks-Audited.ipynb) |
-| מחברת פתרון מורה עם בדיקות | [פתרון מלא Audited](Teacher-Solution-Audited.ipynb) |
-| מקור ופרומפט NotebookLM | [מקור](NotebookLM-Source.md) · [פרומפט](NotebookLM-Prompt.md) |
-| המחשות | [תוצאות שלושה מועמדים](train-validation-candidates.svg) · [חלוקת Train/Validation/Test](train-validation-test-flow.svg) |
-| בקרת איכות | [דוח איכות](Quality-Check.md) |
+| ספר התלמיד עם סיפור, הגדרות ונוסחה | [Student-Book.md](Student-Book.md) |
+| מדריך מורה לפי דקות | [Teacher-Guide.md](Teacher-Guide.md) |
+| דוגמה ידנית למורה | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| מחברת מודרכת — 16 תאים, 33 פקודות assert | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
+| מעבדת תלמיד — 17 תאים, 25 השלמות | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
+| פתרון מורה — 12 תאים, 36 פקודות assert | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
+| מקור מצגת ופרומפט | [NotebookLM-Source.md](NotebookLM-Source.md) · [NotebookLM-Prompt.md](NotebookLM-Prompt.md) |
+| המחשות | [השוואת ציונים](train-validation-candidates.svg) · [תפקידי הקבוצות](train-validation-test-flow.svg) |
+| בקרת איכות והרצה מייצגת | [Quality-Check.md](Quality-Check.md) · [Local-Code-Validation.md](Local-Code-Validation.md) |
 
-**חומרי המקור לא שונו:** [Guided](../Guided-Lesson.ipynb) · [Student Lab](../Student-Lab.ipynb) · [Teacher Solution](../Teacher-Solution.ipynb) · [מפת השקפים](../Presentation-Brief.md). במחברת התלמיד החדשה יש השלמות `???` מכוונות, ולא פתרונות גלויים. כל המספרים בדוגמה מומצאים, ואינם ציוני מודל KNN שהורץ.
+**מחברות מקור ללא שינוי:** [מודרכת](../Guided-Lesson.ipynb), [תלמיד](../Student-Lab.ipynb), [פתרון מורה](../Teacher-Solution.ipynb).
+נתוני A/B/C נשמרו (Train: 1.00/0.88/0.60; Validation: 0.65/0.84/0.58). רק פער A נפתר בספר; פתרון יתר הפערים ובחירת המועמד מופיעים במחברת המורה בלבד. CV מלא יילמד במפגש 22.
 
-**סטטוס:** בקרה אריתמטית מקומית על דוגמה מייצגת עברה; Run All Colab, הגהת מצגת, בדיקה חזותית וניסוי כיתה פתוחים.
+**Candidate:** נדרשת הרצת Run All של המחברות, הגהה חזותית וניסוי כיתה.
