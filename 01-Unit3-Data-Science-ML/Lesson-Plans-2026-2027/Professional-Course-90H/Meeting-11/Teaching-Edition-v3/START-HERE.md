@@ -1,16 +1,18 @@
-# מפגש 11 — Boxplot ואיכות נתונים
+# יחידה 3 — מפגש 11: Boxplot ואיכות נתונים
+**מהדורת עומק Teaching-Edition-v3 | כיתה י׳ | 90 דקות הוראה ותרגול + 45 דקות פרויקט**
 
-**מהדורת הוראה v3 • כיתה י׳ • מועמדת לבדיקה**
+## סדר שימוש
+1. [ספר תלמיד מפורט](Student-Book.md) — סיפור → תשע מדידות → רבעונים בשיטת חצאים → גדרות ושפמים → Python → איכות נתונים → פרויקט.
+2. [מדריך מורה לפי דקות](Teacher-Guide.md) ו[פתרון מתמטי/לוגיקת ניקוי](Teacher-Worked-Example.md).
+3. [מחברת הדגמה](Guided-Audited.ipynb), [מעבדת תלמיד בהשלמות](Student-Fill-Blanks-Audited.ipynb), [פתרון מורה עם assert](Teacher-Solution-Audited.ipynb).
+4. [תרשים רבעונים ידני](quartiles-hand-trace.svg) ו[Boxplot מסומן](delivery-boxplot.svg).
+5. [תרשים Penguins המבוסס על נתונים אמיתיים](penguins-species-boxplots.svg) — **למורה או אחרי התרגול בלבד**, מכיל תוצאות שתלמידים אמורים למצוא.
+6. [מקור ל־NotebookLM](NotebookLM-Source.md), [פרומפט 9–10 שקפים](NotebookLM-Prompt.md).
+7. [בדיקת איכות](Quality-Check.md) ו[דוח בדיקות קוד](Local-Code-Validation.md).
 
-1. [ספר תלמיד מפורט](Student-Book.md)
-2. [מדריך מורה מורחב](Teacher-Guide.md)
-3. [חישוב ידני מונחה](Teacher-Worked-Example.md)
-4. [מקור מקצועי למצגת](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות וסטטוס](Quality-Check.md)
+**קובצי המקור נשמרו ללא שינוי:** [מדריך](../Teacher-Guide.md), [הדגמה](../Guided-Lesson.ipynb), [מעבדת מקור](../Student-Lab.ipynb), [פתרון מקור](../Teacher-Solution.ipynb), [מיפוי מצגות](../Presentation-Brief.md).
 
-**מחברות הליבה נשמרו:** [מחברת מודרכת](../Guided-Lesson.ipynb) · [תרגול תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb).
+## דגשים
+שיטת **חצאים ללא החציון** משמשת להמחשת תשע מדידות, ואילו **Pandas linear** משמשת במעבדת המקור וב־Boxplot של Seaborn. עבור תשע המדידות בחרנו נתונים שבהם שתי השיטות מסכימות; הן אינן שקולות בכלל.
 
-**חומרי הליבה המקוריים נשארים מחייבים למטלות:** [מדריך המורה](../Teacher-Guide.md) · [סיכום תלמיד](../Student-Summary.md) · [מחברת מודרכת](../Guided-Lesson.ipynb) · [מעבדת תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb) · [רישום מקור ההשתלמות](../Presentation-Brief.md).
-
-כל מהדורת v3 מוסיפה הסברים ומקשרת לתרגולים קיימים. היא אינה משנה את תוכניות השעות, חומרי ההשתלמות או מחברות המקור.
+המקור האמיתי Penguins הוא 344×7, שתי מדידות סנפיר חסרות. אין למחוק נקודה חריגה ללא ראיה. מחברות קוד נבדקות בשלבים; עדיין נדרשות הרצה מלאה ב־Colab, הגהת NotebookLM וניסוי בכיתה לפני READY.
