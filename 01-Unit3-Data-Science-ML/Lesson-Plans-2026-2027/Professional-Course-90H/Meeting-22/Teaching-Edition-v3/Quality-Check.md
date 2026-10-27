@@ -1,10 +1,16 @@
-# בקרת איכות — מפגש 22 (27.10.2026)
-**Candidate / Content-Checked; לא READY.**
-- נבדקו Guided-Lesson, Student-Lab, Teacher-Solution, Teacher-Guide. חומרי מקור נשמרו ללא שינוי.
-- מקור הדגמה: flipper_length_mm/body_mass_g ו־seed42; מעבדה: bill_length_mm/bill_depth_mm ו־seed17; Test 25%, stratify. מועמדי K [1,3,5,15,51], חמישה קיפולים, macro-F1. ההפרדה נשמרה.
-- דוגמת חישוב ידני סינתטית: שלושה קיפולים עם 0.8,0.9,0.7, ממוצע 0.8. לא תוצאות אמיתיות של Penguins.
-- הסבר מפורש למניעת זליגת מידע, להבחנה בין `cross_validate.test_score` (אימות פנימי) לבין Test החיצוני ולכך ש־CV std אינו רווח סמך.
-- פתוח: הרצה מלאה של מחברות ב־Colab, בדיקת NotebookLM ו־SVG חזותית, פיילוט כיתה ואימות סילבוס עדכני.
+# Quality Check — מפגש 22 | שדרוג עומק חוזר
+**Candidate; NOT READY.**
 
-## שלוש מחברות Audited
-נוצרו Guided-Audited.ipynb (7 תאים), Student-Fill-Blanks-Audited.ipynb (8 תאים) ו־Teacher-Solution-Audited.ipynb (6 תאים). השלמות ??? קיימות רק במחברת התלמיד, והפתרון נפרד. מבנה המחברות נבדק כ־JSON בזמן יצירתן; **לא בוצע Run All** על קובץ Penguins בתשובה זו. דוגמת 0.8 הממוצע מאומת חשבונית.
+## היקף ונאמנות למקור
+השדרוג משתמש באותו נתיב Teaching-Edition-v3. מקור שלוש המחברות לא שונה. המודרכת עובדת עם `flipper_length_mm/body_mass_g`, seed42; מעבדת התלמיד ופתרון המורה עם `bill_length_mm/bill_depth_mm`, seed17; חמישה קיפולים משוכבים, K [1,3,5,15,51], מדד f1_macro ו־25% Test חיצוני.
+
+## עומק מחברות
+- Guided-Audited: **16 תאים, 41 פקודות assert**; חישוב ממוצע סינתטי, חמשת הקיפולים והיעדר חפיפה, ניסוי דליפה באמצעות StandardScaler, חיפוש K, פירוש CV ותוצאה חיצונית.
+- Student-Fill-Blanks-Audited: **19 תאים, 28 השלמות ???**, כולל בדיקות שמחייבות מילוי; לא מוצגים פתרונות K של התלמיד.
+- Teacher-Solution-Audited: **17 תאים, 48 פקודות assert**, כולל בדיקות תוצאות והפרדת Outer Train/Test.
+
+## מדע והסבר
+`cross_validate()["test_score"]` מציין Validation פנימי, לא Test החיצוני; `cv_std` אינו רווח סמך; התאמת אימפוטר וסקיילר נעשית בתוך Pipeline בכל קיפול; התאמה חדשה לכל Outer Train לאחר בחירה; החלוקה לפי קבוצות/זמן מחייבת חשיבה מיוחדת.
+
+## תוצאות וגבולות בדיקה
+חישובי שלושת ציוני הדגמת CV וחישוב ממוצע Scaler בדוגמה סינתטית נבדקו חישובית. **טרם הוכח Run All של מחברות Penguins וקובצי ה־ipynb בסביבת Colab; פקודות assert נכתבו אך אינן בדיקות שעברו כולן.** בדיקה חזותית של שני SVG ושל מצגת NotebookLM, ופיילוט כיתה פתוחים.
