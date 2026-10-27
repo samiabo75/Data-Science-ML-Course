@@ -1,16 +1,17 @@
 # מפגש 8 — מרכז, פיזור והיכרות עם נורמלית
 
-**מהדורת הוראה v3 • כיתה י׳ • מועמדת לבדיקה**
+**כיתה י׳ | 90 דקות הוראה ותרגול + 45 דקות פרויקט | Candidate — לא Ready סופי**
 
-1. [ספר תלמיד מפורט](Student-Book.md)
-2. [מדריך מורה מורחב](Teacher-Guide.md)
-3. [חישוב ידני מונחה](Teacher-Worked-Example.md)
-4. [מקור מקצועי למצגת](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות וסטטוס](Quality-Check.md)
+1. [ספר התלמיד החדש](Student-Book.md)
+2. [מדריך המורה המורחב](Teacher-Guide.md)
+3. [דוגמה מספרית מורה](Teacher-Worked-Example.md)
+4. [המחשה: אותו ממוצע, פיזור שונה](same-mean-different-spread.svg)
+5. [מחברת הדגמה](Guided-Audited.ipynb)
+6. [מעבדת תלמיד עם השלמות](Student-Fill-Blanks-Audited.ipynb)
+7. [פתרון מורה](Teacher-Solution-Audited.ipynb)
+8. [מקור](NotebookLM-Source.md) ו[פרומפט NotebookLM](NotebookLM-Prompt.md)
+9. [בקרת איכות](Quality-Check.md)
 
-**מחברות הליבה נשמרו:** [מחברת מודרכת](../Guided-Lesson.ipynb) · [תרגול תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb).
+**מחברות ומסמכי מקור ללא שינוי:** [הדגמה](../Guided-Lesson.ipynb), [מעבדה](../Student-Lab.ipynb), [פתרון מורה](../Teacher-Solution.ipynb), [מדריך מקורי](../Teacher-Guide.md).
 
-**חומרי הליבה המקוריים נשארים מחייבים למטלות:** [מדריך המורה](../Teacher-Guide.md) · [סיכום תלמיד](../Student-Summary.md) · [מחברת מודרכת](../Guided-Lesson.ipynb) · [מעבדת תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb) · [רישום מקור ההשתלמות](../Presentation-Brief.md).
-
-כל מהדורת v3 מוסיפה הסברים ומקשרת לתרגולים קיימים. היא אינה משנה את תוכניות השעות, חומרי ההשתלמות או מחברות המקור.
+החבילה שומרת את שתי מטלות הליבה: מרכז עם ערך קיצון ונתוני Penguins; פיזור ו־ddof עם העברה למאגר. נדרשים Run All ב־Colab, הגהת מצגת NotebookLM וניסוי כיתה.
