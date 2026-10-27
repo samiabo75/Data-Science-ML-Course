@@ -52,3 +52,8 @@
 - [Meeting-16 — תקן הייחוס](Meeting-16/Teaching-Edition-v3/START-HERE.md)
 - [Meeting-17](Meeting-17/Teaching-Edition-v3/START-HERE.md) · [Meeting-18](Meeting-18/Teaching-Edition-v3/START-HERE.md) · [Meeting-19](Meeting-19/Teaching-Edition-v3/START-HERE.md)
 - [Meeting-20](Meeting-20/Teaching-Edition-v3/START-HERE.md) · [Meeting-21](Meeting-21/Teaching-Edition-v3/START-HERE.md) · [Meeting-22](Meeting-22/Teaching-Edition-v3/START-HERE.md) · [Meeting-23](Meeting-23/Teaching-Edition-v3/START-HERE.md)
+
+## עדכון ביצוע מאומת — 27.10.2026
+מאז יצירת המסמך **בוצעה הרצת Run All אמיתית** עבור 14 המחברות המודרכות ופתרונות המורה. בהרצה הראשונה התגלתה שגיאת יבוא `np` במחברת Guided של מפגש 22; השגיאה תוקנה בקובץ הקיים. הרצה שנייה: **14 PASS, 0 FAIL**, בהתבסס על [GitHub Actions run 40547098341](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40547098341). דוח JSON שמור כארטיפקט workflow. קובץ זה מכיל גם היסטוריית מצב לפני הריצה, ולכן תיאור "טרם הורץ" בסעיפים הקודמים נוגע **לזמן שבו נכתבו**; מצב ההרצה המעודכן הוא 14/14.
+
+שערים שנותרו פתוחים: השלמת שבע מחברות התלמיד ובדיקת Run All של עותקי פתרון מלאים, הגהת SVG והמצגות, פיילוט כיתה. תוצאות ה־CI תקפות לגרסאות הספריות שתועדו בהרצה; אין להניח זהות לגרסאות Colab עתידיות ללא בדיקה.
