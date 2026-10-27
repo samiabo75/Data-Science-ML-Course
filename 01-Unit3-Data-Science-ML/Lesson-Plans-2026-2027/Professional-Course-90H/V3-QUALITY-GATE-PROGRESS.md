@@ -70,3 +70,10 @@
 
 ## שער הרצה ממוכן ל־17–23 — 27.10.2026, PR #37
 נוצר בודק `scripts/run_audited_notebooks.py` עם GitHub Actions `.github/workflows/unit3-notebook-quality.yml`, אשר מבצע Run All לשבע המחברות המודרכות ולשבע מחברות פתרון המורה באמצעות `nbclient` וקובץ `Datasets/penguins.csv` המקומי. בהרצה הראשונה ([run 40546713085](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40546713085)) התקבלו 13 PASS ו־1 FAIL — מפגש 22 Guided נכשל ב־`NameError: np is not defined`. ב־PR #37 תוקן יבוא NumPy בתא הראשון. בהרצה השנייה ([run 40547098341](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40547098341)) הושלמו **14 PASS / 0 FAIL** לפי לוג הבדיקות, ו־GitHub Actions הסתיים בהצלחה; ארטיפקט `quality-run-report.json` צורף להרצה. אין לפרש את התוצאה כאילו שבע מחברות התלמיד המלאות הורצו: הן כוללות חוסרים מכוונים. יתר השערים — בדיקה לאחר השלמת מעבדות תלמיד, הגהת SVG/NotebookLM, פיילוט בכיתה — עדיין פתוחים. **סטטוס: Code Run-All verified (14 teacher-facing notebooks); Candidate פדגוגי, לא READY מלא.**
+
+## שער הרצה למעבדות התלמיד 17–23 — 27.10.2026, PR #38
+נוסף `scripts/run_completed_student_notebooks.py` ומפתח מילוי נפרד `scripts/student_completion_keys.json`. סקריפט הבדיקה משלים את `???` בעותק בזיכרון בלבד, מחליף גישת CSV חיצונית בקובץ `Datasets/penguins.csv`, ומריץ את כל תאי מחברת התלמיד ב־`nbclient` מבלי לשנות את המחברות המוצגות לתלמידים. **GitHub Actions run [40548472873](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40548472873) הצליח: 7/7 מעבדות תלמיד PASS, לצד 14/14 מחברות מודרכות ופתרונות מורה PASS.** דו"חות JSON צורפו כארטיפקט. PR #38 מוזג לענף `main`.
+
+**מגבלת פרטיות/פדגוגיה:** המאגר ציבורי; מפתח המילוי הנפרד גלוי למי שמאתר אותו במאגר. אין להפנות תלמידים לקובץ המפתח ואין להציגו בתוך קובצי תלמיד או מצגות. אם נדרשת הסתרה אמיתית של פתרונות, יש להעביר מפתחות למאגר פרטי/Secrets עם תהליך CI מתאים.
+
+הושלם שער Run All טכני **21/21 מחברות בתצורת פתרון תקינה**, אך עדיין לא בוצעו בדיקה דידקטית של יכולת פתרון עצמאית, הגהת SVG/NotebookLM או פיילוט בכיתה. הסטטוס הכללי נשאר `Candidate` עד השלמת השערים הפדגוגיים.
