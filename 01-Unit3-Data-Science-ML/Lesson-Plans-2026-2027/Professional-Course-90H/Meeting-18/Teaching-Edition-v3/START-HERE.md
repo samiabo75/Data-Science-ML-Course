@@ -1,17 +1,22 @@
-# מפגש 18 — מטריצת בלבול וסוגי טעויות | מהדורת עומק
-**90 דקות הוראה ותרגול + 45 דקות פרויקט. סטטוס Candidate; חומרי המקור נשמרו ללא שינוי.**
+# מפגש 18 — מטריצת בלבול וסוגי טעויות | Teaching Edition v3
+**כיתה י׳ · 90 דקות הוראה ותרגול + 45 דקות פרויקט · Candidate**
 
-## סדר עבודה
-1. [ספר תלמיד משודרג](Student-Book.md) — סיפור מפעל, FP/FN, טבלת שמונה מוצרים, מטריצה וחישוב ידני, מעבר לקוד ומשימת מקור עצמאית.
-2. [מדריך מורה משודרג](Teacher-Guide.md) — לו״ז של 135 דקות, עצירות סוקרטיות, אבחון, התאמות ותוצר פרויקט.
-3. [פתרון מדורג לדוגמת המורה](Teacher-Worked-Example.md) — **לא** פתרון מעבדת התלמיד.
-4. [המחשת 2×2 ב־SVG](confusion-matrix-binary-eight.svg) — נתוני דוגמת המורה המומצאת.
-5. [NotebookLM: מסמך מקור](NotebookLM-Source.md) + [פרומפט למצגת 8–10 שקפים](NotebookLM-Prompt.md).
-6. [בקרת איכות](Quality-Check.md) + [דוח בדיקות ומגבלות](Local-Code-Validation.md).
+| תוצר | פתיחה |
+|---|---|
+| ספר התלמיד | [Student-Book.md](Student-Book.md) |
+| מדריך מורה | [Teacher-Guide.md](Teacher-Guide.md) |
+| חישוב ידני למורה | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| מחברת הדגמה — 25 פקודות בדיקה | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
+| מעבדת תלמיד — 36 השלמות קוד | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
+| פתרון מורה — 27 פקודות בדיקה | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
+| מקור למצגת | [NotebookLM-Source.md](NotebookLM-Source.md) |
+| פרומפט למצגת | [NotebookLM-Prompt.md](NotebookLM-Prompt.md) |
+| המחשת 2×2 | [confusion-matrix-binary-eight.svg](confusion-matrix-binary-eight.svg) |
+| בקרת איכות | [Quality-Check.md](Quality-Check.md) · [Local-Code-Validation.md](Local-Code-Validation.md) |
 
-## מחברות מקור — נשמרו
-[מחברת הדגמה](../Guided-Lesson.ipynb) · [מעבדת תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb) · [מדריך מקור](../Teacher-Guide.md) · [מפת שקפים](../Presentation-Brief.md).
+## עיגון וגבולות
+קובצי מקור לא שונו: [Guided](../Guided-Lesson.ipynb), [Student Lab](../Student-Lab.ipynb), [Teacher Solution](../Teacher-Solution.ipynb).
+מודרכת: 8 מוצרים עם מטריצה [[3,1],[2,2]]; מעבדת תלמיד: 10 מוצרים עם כלל Always OK; תשתית Penguins מן המקור: flipper_length_mm/body_mass_g, seed42, K=3, 25% Test. **לא לחשוף את פתרון התלמיד בשקפי ההוראה.**
 
-**הפרדת נתונים:** דוגמת המורה 8 מוצרים; מעבדת התלמיד 10 מוצרים עם מסווג OK קבוע; המשך מעבדה על Penguins. לא לחשוף פתרון תלמיד בתוצרי המצגת.
-
-**פתוח:** Run All מלא ב־Colab, הגהת NotebookLM, בדיקה חזותית של ההמחשה וניסוי בכיתה. אין לסמן READY.
+## שער איכות
+נבדקו בפועל שתי המטריצות הבינריות ו־Accuracy בקוד מקומי. **טרם הושלמו** Run All של המחברות, אימות מלא על CSV, בדיקת SVG ו־NotebookLM חזותית ופיילוט בכיתה. לכן Candidate בלבד.
