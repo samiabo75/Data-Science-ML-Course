@@ -19,3 +19,6 @@
 - `e=y−ŷ`: שארית חיובית משמעותה תחזית חסר.
 - `SST` מחושב מממוצע יעדי Test רק לצורך הגדרת R², **לא** לצורך למידת המודל.
 - R² של קו בסיס Mean מן האימון אינו חייב להיות אפס על Test; אין לשנות seed בעקבות מדד Test.
+
+## ראיית הרצה מאומתת — GitHub Actions (27.10.2026)
+[Workflow run 40561013517](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40561013517) הסתיים בהצלחה. לוג GitHub מציג **Meeting 24 Guided-Audited PASS, Teacher-Solution-Audited PASS, Student-Fill-Blanks-Audited לאחר השלמת 29 חוסרים PASS**. בדיקת כלל מפגשים 17–24: **16/16 מחברות מורה והדגמה PASS + 8/8 מעבדות תלמיד בתצורת פתרון PASS = 24/24**. מחברות התלמיד המקוריות נשארו עם חוסרים; מפתח התשובות הנפרד ציבורי במאגר ולכן אינו חסוי. בדיקות NotebookLM ופיילוט כיתה נשארו פתוחות, כבקשת המשתמש; Candidate פדגוגי, Code Run All verified.
