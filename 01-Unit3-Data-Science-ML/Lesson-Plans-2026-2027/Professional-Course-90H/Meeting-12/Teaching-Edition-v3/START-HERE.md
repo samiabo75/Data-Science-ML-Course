@@ -1,16 +1,19 @@
-# מפגש 12 — יעד, חלוקה והשלמת חסרים
+# יחידה 3 — מפגש 12: יעד, חלוקה והשלמת חסרים
+**כיתה י׳ · 90 דקות הוראה ותרגול + 45 דקות פרויקט · מהדורת עומק v3**
 
-**מהדורת הוראה v3 • כיתה י׳ • מועמדת לבדיקה**
+## סדר שימוש
+1. [ספר תלמיד](Student-Book.md) — סיפור, הגדרת X/y, חישוב אימון ביד, מניעת דליפה וקישור ל־AI.
+2. [מדריך מורה](Teacher-Guide.md) — תכנון דקות, הבחנת demo/lab ומדרג רמזים.
+3. [פתרון מורה ידני](Teacher-Worked-Example.md).
+4. [תרשים חלוקה](xy-split-flow.svg), [תרשים אימוץ ממוצע אימון](train-mean-imputation.svg), [נתוני חסרים מאומתים של Penguins](penguins-missing-by-field.svg).
+5. [מחברת הדגמה — seed 42 ותכונות מקור](Guided-Audited.ipynb).
+6. [מעבדת תלמיד בהשלמות — seed 17 ושתי התכונות המקוריות למעבדה](Student-Fill-Blanks-Audited.ipynb).
+7. [פתרון מורה עם בדיקות](Teacher-Solution-Audited.ipynb).
+8. [מקור ל־NotebookLM](NotebookLM-Source.md) ו[פרומפט למצגת עד 10 שקפים](NotebookLM-Prompt.md).
+9. [יומן בקרת איכות](Quality-Check.md) ו[דוח בדיקות קוד](Local-Code-Validation.md).
 
-1. [ספר תלמיד מפורט](Student-Book.md)
-2. [מדריך מורה מורחב](Teacher-Guide.md)
-3. [חישוב ידני מונחה](Teacher-Worked-Example.md)
-4. [מקור מקצועי למצגת](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות וסטטוס](Quality-Check.md)
+**מקורות נשמרו ללא שינוי:** [מדריך מורה מקורי](../Teacher-Guide.md), [מחברת Guided](../Guided-Lesson.ipynb), [מעבדת תלמיד](../Student-Lab.ipynb), [פתרון מקור](../Teacher-Solution.ipynb), [תוכן למצגת](../Presentation-Brief.md).
 
-**מחברות הליבה נשמרו:** [מחברת מודרכת](../Guided-Lesson.ipynb) · [תרגול תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb).
+**הבחנה חשובה:** הדגמת הקורס משתמשת ב־bill_length_mm/bill_depth_mm ו־seed 42; מטלת התלמיד משתמשת ב־flipper_length_mm/body_mass_g ו־seed 17. אסור להעתיק את תוצאות ההדגמה כתוצאות המעבדה.
 
-**חומרי הליבה המקוריים נשארים מחייבים למטלות:** [מדריך המורה](../Teacher-Guide.md) · [סיכום תלמיד](../Student-Summary.md) · [מחברת מודרכת](../Guided-Lesson.ipynb) · [מעבדת תלמיד](../Student-Lab.ipynb) · [פתרון מורה](../Teacher-Solution.ipynb) · [רישום מקור ההשתלמות](../Presentation-Brief.md).
-
-כל מהדורת v3 מוסיפה הסברים ומקשרת לתרגולים קיימים. היא אינה משנה את תוכניות השעות, חומרי ההשתלמות או מחברות המקור.
+**סטטוס:** חומר ובדיקות מייצגות; לפני READY נדרשים Run All ב־Colab, הפקה והגהה של מצגת NotebookLM וניסוי בכיתה.
