@@ -545,5 +545,52 @@
       "classes_",
       "0"
     ]
+  ],
+  "28": [
+    [
+      "2",
+      "2",
+      "1",
+      "0"
+    ],
+    [],
+    [
+      "\"Age\"",
+      "\"Fare\"",
+      "\"SibSp\"",
+      "\"Sex\"",
+      "\"Pclass\"",
+      "\"Survived\"",
+      "\"Survived\"",
+      "0.25",
+      "17"
+    ],
+    [
+      "isna",
+      "Pclass",
+      "mean"
+    ],
+    [
+      "\"median\"",
+      "\"most_frequent\"",
+      "KNeighborsClassifier",
+      "5",
+      "\"f1\""
+    ],
+    [
+      "\"linear\"",
+      "1.0",
+      "\"most_frequent\"",
+      "\"f1\"",
+      "\"f1\""
+    ],
+    [
+      "X_test",
+      "X_test",
+      "y_test",
+      "predictions",
+      "y_test",
+      "predictions"
+    ]
   ]
 }
