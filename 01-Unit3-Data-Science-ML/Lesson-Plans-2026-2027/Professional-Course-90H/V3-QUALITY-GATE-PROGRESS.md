@@ -89,3 +89,6 @@
 
 ## התאמת SVG לעברית — מפגשים 17–23, PR #42 (27.10.2026)
 כל **13 ההמחשות המקוריות** הותאמו לכיתובים בעברית ושמרו שמות API ומספרים באנגלית לפי הצורך. במהלך בדיקת תצוגת PNG נמצא שכיווניות עברית ב־CairoSVG שגויה; סקריפט הרינדור תוקן להשתמש ב־python-bidi **על עותק הרינדור בלבד** בלי לשנות את סדר האותיות הנכון בקובצי SVG המקוריים. בהמחשת GridSearchCV של מפגש 23 קוצר טקסט שחפף לתיבה סמוכה. הרצה חוזרת [40558950229](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40558950229): **13/13 PASS**; הגלריה והתרשים המתוקן נבדקו חזותית. דוח: [SVG-HEBREW-LOCALIZATION-17-23.md](SVG-HEBREW-LOCALIZATION-17-23.md); [PR #42](https://github.com/samiabo75/Data-Science-ML-Course/pull/42) מוזג ל־main. עדיין פתוח: הגהת מצגות NotebookLM שהופקו בפועל ופיילוט הוראה.
+
+## שער אישור מצגות NotebookLM מופקות 17–23 — PR #43 (27.10.2026)
+לא נמצאו בתיקיות מפגשים 17–23 קובצי מצגות תוצר (PPTX/PDF/HTML/PNG) שניתן לבדוק שקף־שקף; קיימים Brief/Prompt ו־Source/Prompt בלבד. נוצר מחוון אישור מפורט [NOTEBOOKLM-PRODUCED-SLIDES-ACCEPTANCE-17-23.md](NOTEBOOKLM-PRODUCED-SLIDES-ACCEPTANCE-17-23.md), כולל חישובים מחייבים, הפרדה בין דוגמת מורה ותרגיל תלמיד, ובדיקת RTL/נוסחאות/שקפים. הוגדרו שלושה שערים נפרדים: Source-ready, Slide-reviewed, Classroom-ready. **אין טענה שנבדקו מצגות מופקות ואין שינוי ל־READY.** PR #43 מוזג ל־main.
