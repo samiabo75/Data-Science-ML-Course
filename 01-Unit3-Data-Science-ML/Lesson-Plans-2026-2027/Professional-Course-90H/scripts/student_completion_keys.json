@@ -567,7 +567,7 @@
     ],
     [
       "isna",
-      "Pclass",
+      "\"Pclass\"",
       "mean"
     ],
     [
