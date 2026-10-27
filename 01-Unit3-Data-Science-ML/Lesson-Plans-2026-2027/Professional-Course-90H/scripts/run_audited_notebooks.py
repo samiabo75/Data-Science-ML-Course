@@ -18,7 +18,7 @@ from nbclient.exceptions import CellExecutionError
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only", type=int, choices=range(17, 30))
+    parser.add_argument("--only", type=int, choices=range(17, 31))
     parser.add_argument("--out", default="quality-run-report.json")
     args = parser.parse_args()
     course = Path(__file__).resolve().parents[1]
@@ -46,7 +46,7 @@ def main():
         "dataset": str(dataset.relative_to(repo)),
         "results": [],
     }
-    numbers = [args.only] if args.only else list(range(17, 30))
+    numbers = [args.only] if args.only else list(range(17, 31))
     failed = 0
     for n in numbers:
         for kind in ("Guided-Audited.ipynb", "Teacher-Solution-Audited.ipynb"):
