@@ -1,14 +1,20 @@
-# מפגש 23 — GridSearchCV וקריאת תוצאות | הוראה משודרגת v3
+# מפגש 23 — GridSearchCV וקריאת תוצאות | Teaching Edition v3
+**90 דקות הוראה ותרגול + 45 דקות פרויקט | סטטוס Candidate**
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+| תוצר | פתיחה |
+|---|---|
+| ספר תלמיד | [Student-Book.md](Student-Book.md) |
+| מדריך מורה | [Teacher-Guide.md](Teacher-Guide.md) |
+| דוגמה ידנית | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| מחברת מודרכת עם בדיקות | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
+| מעבדת תלמיד עם השלמות | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
+| פתרון מורה Audited | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
+| NotebookLM מקור ופרומפט | [מקור](NotebookLM-Source.md) · [פרומפט](NotebookLM-Prompt.md) |
+| המחשות | [3×5 חיפוש](grid-search-3x5.svg) · [צינור ובחירה](gridsearch-pipeline-flow.svg) |
+| Quality Check | [דוח איכות](Quality-Check.md) |
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
+**מקורות בלי שינוי:** [Guided](../Guided-Lesson.ipynb) · [Student-Lab](../Student-Lab.ipynb) · [Teacher-Solution](../Teacher-Solution.ipynb) · [מפת שקפים](../Presentation-Brief.md).
 
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
+המודרכת משתמשת ב־bill_length_mm/bill_depth_mm/island וב־seed42; התלמיד משתמש ב־flipper_length_mm/body_mass_g/island וב־seed17. תוצאות K נבחר ופלטי Penguins אינם מוצגים בספר.
 
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+**מגבלות:** טרם בוצעו Run All ב־Colab, בדיקה חזותית מלאה או פיילוט כיתה.
