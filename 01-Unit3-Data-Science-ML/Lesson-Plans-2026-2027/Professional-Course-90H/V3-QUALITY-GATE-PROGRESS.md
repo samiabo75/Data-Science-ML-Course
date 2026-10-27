@@ -83,3 +83,6 @@
 
 ## שער רינדור SVG למפגשים 17–23 — PR #40, ‏27.10.2026
 נוסף סקריפט רינדור `scripts/render_svg_quality_gate.py` ותהליך `.github/workflows/unit3-svg-visual-check.yml` המייצרים 13 קובצי PNG, גלריית Contact Sheet ודוח JSON כארטיפקט. ב־[GitHub Actions run 40555379504](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40555379504) עברו **13/13 קובצי SVG בדיקת רינדור וממדים** (0 כישלונות). PR #40 מוזג ל־main. מדריך בדיקה: [SVG-RENDER-QUALITY-GATE.md](SVG-RENDER-QUALITY-GATE.md). בדיקה זו **אינה** הגהת קריאות, שיבושי כיווניות, חפיפת טקסט או מצגות NotebookLM שהופקו; שער ההגהה האנושית והפיילוט נשאר פתוח, ולכן אין לשנות READY על סמך הרינדור בלבד.
+
+## בדיקה חזותית של PNG ושיפור תרשים מפגש 21 — PR #41 (27.10.2026)
+הורדה ונפתחה בפועל גלריית 13 התמונות המרונדרות מארטיפקט GitHub Actions 40555379504. נמצא כי התרשים המקורי של Train→Validation→Test במפגש 21 מטעה בהצגת חצים ברצף. התרשים תוקן לפיצול DATA SPLIT ל־3 קבוצות נפרדות. הרינדור החדש ב־[GitHub Actions run 40557219536](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40557219536) עבר, ותמונת התיקון נפתחה ונבדקה חזותית: כיתוב קריא וללא חפיפה נראית. דוח מפורט: [SVG-RENDERED-HUMAN-REVIEW-17-23.md](SVG-RENDERED-HUMAN-REVIEW-17-23.md). PR #41 מוזג. **פתוח:** רוב 13 האיורים באנגלית; יש לבצע לוקליזציה עברית מבוקרת, בדיקת הצגה בכיתה והגהת קובצי המצגת המוגמרים. סטטוס Candidate.
