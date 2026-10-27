@@ -13,3 +13,6 @@ Guided seed42: Age, Fare, Sex, Pclass. Student + Teacher Solution seed17: Age, F
 
 ## מצב בדיקות
 Run All דורש מעבר 24/24 מחברות מודרכות/מורה ו־12/12 מחברות תלמיד בתצורת פתרון במפגשים 17–28. לא מאושר ללא ראיית CI. הגהת המצגות והפיילוט נשמרים לסוף.
+
+## תוצאת הרצה מאומתת — 27.10.2026
+[GitHub Actions run 40568544086](https://github.com/samiabo75/Data-Science-ML-Course/actions/runs/40568544086) הסתיים בהצלחה: **Guided-Audited PASS, Teacher-Solution-Audited PASS, Student-Fill-Blanks-Audited בתצורת פתרון PASS**. כלל מפגשים 17–28: **24/24 מחברות מורה/הדגמה + 12/12 מעבדות תלמיד בתצורת פתרון = 36/36 PASS**. גילינו ותיקנו בתהליך שתי תקלות: ספריית seaborn חסרה ב־CI; שם Pclass הוכנס ללא מירכאות למפתח ההשלמות הזמני. תיעוד זה אינו הוכחת מוכנות הכיתה או הגהת שקפים. [PR #48](https://github.com/samiabo75/Data-Science-ML-Course/pull/48) מוזג ל־main.
