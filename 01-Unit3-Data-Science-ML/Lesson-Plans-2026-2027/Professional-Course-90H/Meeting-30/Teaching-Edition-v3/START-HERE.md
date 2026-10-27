@@ -1,14 +1,18 @@
-# מפגש 30 — הגנה אישית והעברת ידע להמשך | הוראה משודרגת v3
+# מפגש 30 — הגנה אישית והעברת ידע להמשך
+**135 דקות פרויקט, 0 דקות שיעור חדש — ערכת הוראה v3**
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+| רכיב | קישור |
+|---|---|
+| ספר התלמיד | [Student-Book.md](Student-Book.md) |
+| מדריך המורה | [Teacher-Guide.md](Teacher-Guide.md) |
+| דוגמת הגנה | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| הדגמת מוכנות לוגית | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
+| מחוון ההגנה לתלמיד | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
+| מחוון המורה | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
+| מקור NotebookLM | [NotebookLM-Source.md](NotebookLM-Source.md) |
+| פרומפט למצגת | [NotebookLM-Prompt.md](NotebookLM-Prompt.md) |
+| שער בקרת איכות | [Quality-Check.md](Quality-Check.md) |
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
+**אין מטלת קוד חדשה במפגש זה.** תוצר החובה הוא הפרויקט האישי וההגנה. הבודקים האוטומטיים מריצים רק תבניות הכנה, ואין פירוש הדבר שפרויקטים אישיים עברו Run All או שנערכה הגנה. מחברות המקור נשמרו: [הדגמה](../Guided-Lesson.ipynb), [מעבדה](../Student-Lab.ipynb), [מורה](../Teacher-Solution.ipynb).
 
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
-
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+**מבנה הגנה מוצע:** סיפור הבעיה → מקור ויעד → מאפיינים → חלוקת הנתונים → אימון ואימות → בחירת מודל → הערכה סופית → טעות אחת ומגבלה → תחזית קלט חדש → שאלת שינוי מהמורה. השיעור מחולק לתחנות הגנה לפי זמני הכיתה, השלמת יומן ראיות ורפלקציה.
