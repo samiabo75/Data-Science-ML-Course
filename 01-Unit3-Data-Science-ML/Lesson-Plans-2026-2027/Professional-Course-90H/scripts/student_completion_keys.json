@@ -515,5 +515,35 @@
     [
       "xor_y"
     ]
+  ],
+  "27": [
+    [
+      "0"
+    ],
+    [
+      "\"sex\"",
+      "\"bill_depth_mm\"",
+      "\"body_mass_g\"",
+      "\"sex\"",
+      "0.25",
+      "17"
+    ],
+    [
+      "\"mean\"",
+      "\"linear\"",
+      "1.0",
+      "fit",
+      "predict"
+    ],
+    [
+      "y_test",
+      "predictions",
+      "labels"
+    ],
+    [
+      "decision_function",
+      "classes_",
+      "0"
+    ]
   ]
 }
