@@ -27,6 +27,11 @@ jobs:
           MPLBACKEND: Agg
         run: |
           python 01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/scripts/run_early_notebooks_01_16.py
+      - name: Execute completed student notebooks 01–16
+        env:
+          MPLBACKEND: Agg
+        run: |
+          python 01-Unit3-Data-Science-ML/Lesson-Plans-2026-2027/Professional-Course-90H/scripts/run_early_completed_students_01_16.py
       - name: Execute teacher notebooks
         env:
           MPLBACKEND: Agg
@@ -44,6 +49,7 @@ jobs:
           name: unit3-meetings-01-30-quality
           path: |
             unit3-early-01-16-run-report.json
+            unit3-early-student-run-report.json
             quality-run-report.json
             student-quality-run-report.json
           if-no-files-found: warn
