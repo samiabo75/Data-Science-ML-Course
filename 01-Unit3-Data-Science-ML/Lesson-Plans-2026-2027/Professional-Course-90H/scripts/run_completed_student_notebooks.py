@@ -26,17 +26,18 @@ def complete(source, answers):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only", type=int, choices=range(17,28))
+    parser.add_argument("--only", type=int, choices=range(17,29))
     parser.add_argument("--out", default="student-quality-run-report.json")
     args = parser.parse_args()
     course = Path(__file__).resolve().parents[1]
     repo = course.parents[2]
     dataset = repo / "Datasets" / "penguins.csv"
+    titanic_dataset = repo / "Datasets" / "titanic_data.csv"
     keys = json.loads((Path(__file__).parent / "student_completion_keys.json").read_text(encoding="utf8"))
     original_url = "https://raw.githubusercontent.com/samiabo75/Data-Science-ML-Course/main/Datasets/penguins.csv"
     report = {"timestamp_utc":datetime.now(timezone.utc).isoformat(),"results":[]}
     failures = 0
-    for n in ([args.only] if args.only else range(17,28)):
+    for n in ([args.only] if args.only else range(17,29)):
         file = course / f"Meeting-{n}" / "Teaching-Edition-v3" / "Student-Fill-Blanks-Audited.ipynb"
         outcome = {"meeting":n,"notebook":file.name,"status":"FAIL"}
         try:
@@ -46,7 +47,7 @@ def main():
             if len(code_cells)!=len(answers):
                 raise ValueError(f"Code cells {len(code_cells)} != keyed {len(answers)}")
             for i,cell in enumerate(code_cells):
-                cell.source=complete(cell.source,answers[i]).replace(original_url,str(dataset))
+                cell.source=complete(cell.source,answers[i]).replace(original_url,str(dataset)).replace("https://raw.githubusercontent.com/arielb30/datasets/main/titanic_data.csv",str(titanic_dataset))
             NotebookClient(nb,timeout=240,kernel_name="python3",allow_errors=False,
                            resources={"metadata":{"path":str(repo)}}).execute()
             outcome.update(status="PASS",code_cells=len(code_cells),
