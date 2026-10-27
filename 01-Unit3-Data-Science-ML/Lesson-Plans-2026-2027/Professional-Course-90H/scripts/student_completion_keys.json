@@ -434,5 +434,57 @@
       "y_train",
       "X_test_ready"
     ]
+  ],
+  "25": [
+    [
+      "abs",
+      "20"
+    ],
+    [],
+    [
+      "\"body_mass_g\"",
+      "\"bill_depth_mm\"",
+      "\"flipper_length_mm\"",
+      "\"island\"",
+      "\"body_mass_g\"",
+      "0.25",
+      "17"
+    ],
+    [
+      "\"median\"",
+      "\"most_frequent\"",
+      "numeric",
+      "categorical",
+      "LinearRegression"
+    ],
+    [
+      "5",
+      "X_train",
+      "y_train",
+      "\"r2\""
+    ],
+    [
+      "X_train",
+      "y_train",
+      "X_test",
+      "\"actual_g\"",
+      "\"predicted_g\"",
+      "mean",
+      "y_test",
+      "predictions",
+      "y_test",
+      "predictions"
+    ],
+    [
+      "\"mean\"",
+      "X_train",
+      "y_train",
+      "X_test",
+      "y_test",
+      "baseline_pred",
+      "y_test",
+      "baseline_pred"
+    ],
+    []
   ]
 }
