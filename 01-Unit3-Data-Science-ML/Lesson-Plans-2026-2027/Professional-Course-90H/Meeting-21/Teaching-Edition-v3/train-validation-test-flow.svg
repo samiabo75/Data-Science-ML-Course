@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 405"><rect width="1060" height="405" fill="#fff"/><text x="530" y="49" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Train → Validation → Test (roles, not a sequential data transfer)</text><rect x="45" y="115" width="285" height="175" rx="12" fill="#dbeaf7" stroke="#477dad" stroke-width="2"/><rect x="390" y="115" width="285" height="175" rx="12" fill="#fff0d8" stroke="#be9250" stroke-width="2"/><rect x="735" y="115" width="285" height="175" rx="12" fill="#e0f2e3" stroke="#60966c" stroke-width="2"/><g font-family="Arial" text-anchor="middle" fill="#243344"><text x="187" y="158" font-size="29" font-weight="bold">TRAIN</text><text x="187" y="205" font-size="19">Fit model and preprocessing</text><text x="187" y="240" font-size="19">Learn parameters</text><text x="532" y="158" font-size="29" font-weight="bold">VALIDATION</text><text x="532" y="205" font-size="19">Choose model / K</text><text x="532" y="240" font-size="19">Compare candidates</text><text x="876" y="158" font-size="29" font-weight="bold">TEST</text><text x="876" y="205" font-size="19">Evaluate once at end</text><text x="876" y="240" font-size="19">Do not tune from results</text></g><path d="M330 195 L380 195" stroke="#3c5162" stroke-width="4"/><path d="M368 185 L383 195 L368 205" stroke="#3c5162" stroke-width="4" fill="none"/><path d="M675 195 L725 195" stroke="#3c5162" stroke-width="4"/><path d="M713 185 L728 195 L713 205" stroke="#3c5162" stroke-width="4" fill="none"/><text x="530" y="348" text-anchor="middle" font-family="Arial" font-size="21">Set the split and metric before model comparison</text><text x="530" y="376" text-anchor="middle" font-family="Arial" font-size="18">No preprocessing fit or hyperparameter selection on Test</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 440" role="img" aria-label="Dataset is split into separate Train, Validation and Test roles. No records transfer between these sets.">
+<rect width="1060" height="440" fill="#ffffff"/>
+<g font-family="DejaVu Sans,Arial,sans-serif" fill="#203040" text-anchor="middle">
+<text x="530" y="43" font-size="27" font-weight="bold">Three disjoint data roles — not a transfer chain</text>
+<rect x="385" y="68" width="290" height="66" rx="12" fill="#f0f3f6" stroke="#697f91" stroke-width="2"/>
+<text x="530" y="109" font-size="23" font-weight="bold">DATA SPLIT</text>
+</g>
+<g fill="none" stroke="#516575" stroke-width="3">
+<path d="M530 134 V161 H187 V186"/>
+<path d="M530 134 V186"/>
+<path d="M530 161 H873 V186"/>
+</g>
+<g fill="#516575">
+<path d="M179 175 L187 188 L195 175"/>
+<path d="M522 175 L530 188 L538 175"/>
+<path d="M865 175 L873 188 L881 175"/>
+</g>
+<rect x="38" y="190" width="300" height="150" rx="12" fill="#dbeaf7" stroke="#477dad" stroke-width="2"/>
+<rect x="380" y="190" width="300" height="150" rx="12" fill="#fff0d8" stroke="#be9250" stroke-width="2"/>
+<rect x="722" y="190" width="300" height="150" rx="12" fill="#e0f2e3" stroke="#60966c" stroke-width="2"/>
+<g font-family="DejaVu Sans,Arial,sans-serif" text-anchor="middle" fill="#203040">
+<text x="188" y="235" font-size="27" font-weight="bold">TRAIN</text>
+<text x="188" y="275" font-size="18">Fit model and preprocessing</text>
+<text x="188" y="305" font-size="18">Learn parameters</text>
+<text x="530" y="235" font-size="27" font-weight="bold">VALIDATION</text>
+<text x="530" y="275" font-size="18">Compare candidate models</text>
+<text x="530" y="305" font-size="18">Choose model or K</text>
+<text x="872" y="235" font-size="27" font-weight="bold">TEST</text>
+<text x="872" y="275" font-size="18">Evaluate once at the end</text>
+<text x="872" y="305" font-size="18">Do not tune from results</text>
+<text x="530" y="388" font-size="20">Fix the split and metric before comparing models.</text>
+<text x="530" y="416" font-size="18">No preprocessing fit or model selection on held-out Test.</text>
+</g>
+</svg>
