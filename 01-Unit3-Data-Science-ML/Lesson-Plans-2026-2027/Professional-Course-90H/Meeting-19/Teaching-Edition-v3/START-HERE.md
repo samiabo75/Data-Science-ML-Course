@@ -1,14 +1,19 @@
-# מפגש 19 — Precision, Recall ו־F1 | הוראה משודרגת v3
+# מפגש 19 — Precision, Recall ו־F1 | Teaching Edition v3
+**90 דקות לימוד ותרגול + 45 דקות פרויקט | Candidate — דרושה בדיקת כיתה.**
 
-**גרסה מועמדת לבדיקה. קובצי המקור לא שונו.**
+| תוצר | פתיחה |
+|---|---|
+| ספר תלמיד עם סיפור, נוסחאות, חישוב ידני | [Student-Book.md](Student-Book.md) |
+| מדריך מורה לפי דקות | [Teacher-Guide.md](Teacher-Guide.md) |
+| פתרון ידני של דוגמת המורה | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| מחברת הדגמה מקורית | [Guided-Lesson.ipynb](../Guided-Lesson.ipynb) |
+| מעבדת תלמיד מקורית | [Student-Lab.ipynb](../Student-Lab.ipynb) |
+| פתרון מורה מקורי | [Teacher-Solution.ipynb](../Teacher-Solution.ipynb) |
+| מקור מצגת | [NotebookLM-Source.md](NotebookLM-Source.md) |
+| פרומפט מצגת | [NotebookLM-Prompt.md](NotebookLM-Prompt.md) |
+| תרשים מדויק | [precision-recall-denominators.svg](precision-recall-denominators.svg) |
+| בקרת איכות | [Quality-Check.md](Quality-Check.md) |
 
-1. [ספר תלמיד מורחב](Student-Book.md)
-2. [מדריך מורה](Teacher-Guide.md)
-3. [חישוב/נימוק ידני](Teacher-Worked-Example.md)
-4. [מקור NotebookLM](NotebookLM-Source.md)
-5. [פרומפט NotebookLM](NotebookLM-Prompt.md)
-6. [בקרת איכות](Quality-Check.md)
+**שמירת המטלות:** נתוני מודרכת: 8 מוצרים; נתוני תלמיד: 12 מוצרים; במטריצת Penguins המורה מדגים Chinstrap, התלמיד מחשב Adelie. המקורות ללא שינוי. מחברות Audited נפרדות לא נוצרו בשדרוג זה.
 
-מחברות המקור והפתרון: [מחברת מודרכת מקורית](../Guided-Lesson.ipynb) · [מעבדת תלמיד מקורית](../Student-Lab.ipynb) · [פתרון המורה המקורי](../Teacher-Solution.ipynb) · [מדריך המורה המקורי](../Teacher-Guide.md) · [מצגת המקור ממופית](../Presentation-Brief.md).
-
-**היעד:** לפתוח בסיפור, לנמק שיטה, לחשב ידנית כשנדרש, להראות המחשה ו־Python, לבצע ניסוי ביקורתי ולנסח מגבלה.
+**עדיין פתוח:** הרצת Run All של המחברות בסביבת Colab, הגהת מצגת NotebookLM, בדיקת ההמחשה בפועל וניסוי כיתה.
