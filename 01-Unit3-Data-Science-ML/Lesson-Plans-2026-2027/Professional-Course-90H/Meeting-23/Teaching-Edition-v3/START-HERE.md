@@ -1,20 +1,19 @@
 # מפגש 23 — GridSearchCV וקריאת תוצאות | Teaching Edition v3
-**90 דקות הוראה ותרגול + 45 דקות פרויקט | סטטוס Candidate**
+**כיתה י׳ · 90 דקות הוראה ותרגול + 45 דקות פרויקט · Candidate**
 
 | תוצר | פתיחה |
 |---|---|
 | ספר תלמיד | [Student-Book.md](Student-Book.md) |
 | מדריך מורה | [Teacher-Guide.md](Teacher-Guide.md) |
-| דוגמה ידנית | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
-| מחברת מודרכת עם בדיקות | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
-| מעבדת תלמיד עם השלמות | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
-| פתרון מורה Audited | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
-| NotebookLM מקור ופרומפט | [מקור](NotebookLM-Source.md) · [פרומפט](NotebookLM-Prompt.md) |
-| המחשות | [3×5 חיפוש](grid-search-3x5.svg) · [צינור ובחירה](gridsearch-pipeline-flow.svg) |
-| Quality Check | [דוח איכות](Quality-Check.md) |
+| חישוב ידני | [Teacher-Worked-Example.md](Teacher-Worked-Example.md) |
+| מחברת מודרכת — 18 תאים, 35 פקודות בדיקה | [Guided-Audited.ipynb](Guided-Audited.ipynb) |
+| מעבדת תלמיד — 22 תאים, 25 השלמות | [Student-Fill-Blanks-Audited.ipynb](Student-Fill-Blanks-Audited.ipynb) |
+| פתרון מורה — 13 תאים, 39 פקודות בדיקה | [Teacher-Solution-Audited.ipynb](Teacher-Solution-Audited.ipynb) |
+| מקור ופרומפט NotebookLM | [מקור](NotebookLM-Source.md) · [פרומפט](NotebookLM-Prompt.md) |
+| המחשות | [15 התאמות CV](grid-search-3x5.svg) · [Pipeline/Refit/Test](gridsearch-pipeline-flow.svg) |
+| בקרת איכות | [Quality-Check.md](Quality-Check.md) · [Local-Code-Validation.md](Local-Code-Validation.md) |
 
-**מקורות בלי שינוי:** [Guided](../Guided-Lesson.ipynb) · [Student-Lab](../Student-Lab.ipynb) · [Teacher-Solution](../Teacher-Solution.ipynb) · [מפת שקפים](../Presentation-Brief.md).
+**מקור שמור:** [Guided](../Guided-Lesson.ipynb), [Student](../Student-Lab.ipynb), [Teacher Solution](../Teacher-Solution.ipynb).
+דוגמת מורה: bill_length_mm/bill_depth_mm/island, seed42. מעבדה: flipper_length_mm/body_mass_g/island, seed17. K=[3,5,9], CV חמישה קיפולים, f1_macro, refit=True, DummyClassifier. אין להציג את K הנבחר במעבדה מראש.
 
-המודרכת משתמשת ב־bill_length_mm/bill_depth_mm/island וב־seed42; התלמיד משתמש ב־flipper_length_mm/body_mass_g/island וב־seed17. תוצאות K נבחר ופלטי Penguins אינם מוצגים בספר.
-
-**מגבלות:** טרם בוצעו Run All ב־Colab, בדיקה חזותית מלאה או פיילוט כיתה.
+**Candidate:** נדרשות בדיקות Run All על Penguins, הגהה חזותית, NotebookLM ופיילוט.
