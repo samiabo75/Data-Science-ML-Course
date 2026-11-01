@@ -1,28 +1,26 @@
-# ספר הקורס המאוחד — AI (מהדורת 2026)
+# AI Course Textbooks (2026)
 
-מיקום ייעודי לשמירת הספרים וחומרי התלמידים מבלי לשנות את תיקיות תכניות הלימודים הקיימות.
+This folder stores the safe Windows uploader for the 110 files of our AI course. **The textbook files have not yet been uploaded to GitHub.**
 
-## מבנה החבילה המיועדת
+## Expected layout after successful upload
 
-לאחר ההעלאה תופיע הספרייה `ספרי_הקורס` ובה שלוש תתי־ספריות:
+- `Course-Libraries/01_הכנה`: 4 foundation chapters, their Word/PDF/Colab files, and an assembled book.
+- `Course-Libraries/02_נושאי_ליבה`: 16 core chapters and their assembled book.
+- `Course-Libraries/03_למידה_עמוקה_ופרויקט_גמר`: 12 deep learning chapters and their assembled book.
+- `Course-Libraries/`: complete 32-chapter PDF and DOCX, manifest, README.
 
-- `01_הכנה` — ארבעה פרקי יסוד עם Word, PDF ומחברות Colab; ספר הכנה מאוחד.
-- `02_נושאי_ליבה` — 16 פרקים עם Word, PDF ומחברות Colab; ספר ליבה מאוחד.
-- `03_למידה_עמוקה_ופרויקט_גמר` — 12 פרקים עם Word, PDF ומחברות Colab; ספר התמחות מאוחד.
-- בשורש `ספרי_הקורס` — הספר המלא (32 פרקים), מפתח קבצים וקובץ הסבר.
+The uploaded source ZIP must be named `AI_Course_2026_All_3_Libraries.zip` and contains exactly 110 files.
 
-**סטטוס:** כרגע נוסף כלי ההעלאה למאגר. קובצי ה־Word, PDF ו־Colab עדיין אינם ב־GitHub; אין לראות בהימצאות README זה אישור שהחבילה הועלתה.
+## Windows PowerShell 5.1 upload
 
-## העלאת קובצי הספר
-
-יש להוריד מ־ChatGPT את `AI_Course_2026_All_3_Libraries.zip` (כולל 110 קבצים) ולמקם אותו במחשב.
-
-מתוך PowerShell עם Git מותקן ומחובר לחשבון GitHub:
+Download **the latest** [UPLOAD_FULL_COLLECTION.ps1](./UPLOAD_FULL_COLLECTION.ps1) and the course ZIP to your Downloads folder, then run:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\UPLOAD_FULL_COLLECTION.ps1 -ZipPath "C:\Downloads\AI_Course_2026_All_3_Libraries.zip"
+cd "$env:USERPROFILE\Downloads"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/samiabo75/Data-Science-ML-Course/main/AI-Course-Textbooks-2026/UPLOAD_FULL_COLLECTION.ps1" -OutFile "UPLOAD_FULL_COLLECTION.ps1"
+powershell -ExecutionPolicy Bypass -File ".\UPLOAD_FULL_COLLECTION.ps1" -ZipPath ".\AI_Course_2026_All_3_Libraries.zip"
 ```
 
-אפשר לציין גם `-RepoPath` כדי לעבוד על עותק Git שכבר קיים במחשב. הסקריפט מוודא 110 קבצים, מונע דריסה של תיקייה קיימת, ודוחף את החבילה לענף `main`.
+The script is written in ASCII so Windows PowerShell 5.1 does not misread Hebrew literals. The source ZIP retains all Hebrew folder and file names. It refuses to overwrite an existing destination and uses a fresh fast-forward pull before committing to `main`.
 
-שימו לב: קובצי PDF ו־Word מהספרים עשויים להיות גדולים; אין להעלות חומרים עם נתוני תלמידים אישיים.
+The final repository destination is `AI-Course-Textbooks-2026/Course-Libraries`.
