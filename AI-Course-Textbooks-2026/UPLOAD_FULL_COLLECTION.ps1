@@ -1,70 +1,96 @@
-#requires -Version 5.1
-<#
-Upload full AI course collection (110 files) into a separate directory of
-samiabo75/Data-Science-ML-Course. Run on Windows with Git installed and authenticated.
-Usage:
-powershell -ExecutionPolicy Bypass -File .\UPLOAD_FULL_COLLECTION.ps1 -ZipPath "C:\Downloads\AI_Course_2026_All_3_Libraries.zip"
-Optional: -RepoPath "C:\path\to\Data-Science-ML-Course"
-#>
+# Windows PowerShell 5.1 compatible; ASCII-only source file.
+# This script uploads the 110 course files from the ZIP without changing old course folders.
+# Example (run inside Downloads):
+# powershell -ExecutionPolicy Bypass -File ".\UPLOAD_FULL_COLLECTION.ps1" -ZipPath ".\AI_Course_2026_All_3_Libraries.zip"
 param(
     [Parameter(Mandatory=$true)][string]$ZipPath,
     [string]$RepoPath = ""
 )
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
-$RepoUrl = "https://github.com/samiabo75/Data-Science-ML-Course.git"
-$Destination = "AI-Course-Textbooks-2026\ספרי_הקורס"
+
+$repoUrl = "https://github.com/samiabo75/Data-Science-ML-Course.git"
+$gitFolder = "AI-Course-Textbooks-2026/Course-Libraries"
+$requiredFileCount = 110
+
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    throw "Git was not found. Install Git for Windows or GitHub Desktop with Git available in PATH."
+    throw "Git is missing. Install Git for Windows and reopen PowerShell."
 }
-$ZipPath = (Resolve-Path -LiteralPath $ZipPath).Path
-$workspace = Join-Path $env:TEMP ("ai_course_upload_" + [guid]::NewGuid().ToString("N"))
-New-Item -ItemType Directory -Path $workspace -Force | Out-Null
+$zipFullPath = (Resolve-Path -LiteralPath $ZipPath).Path
+$tempFolder = Join-Path $env:TEMP ("ai_course_" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $tempFolder -Force | Out-Null
 try {
-    Expand-Archive -LiteralPath $ZipPath -DestinationPath $workspace -Force
-    $source = Join-Path $workspace "AI_Course_Organized_2026"
-    if (-not (Test-Path -LiteralPath $source)) { throw "ZIP missing AI_Course_Organized_2026 root folder" }
-    $files = @(Get-ChildItem -LiteralPath $source -File -Recurse)
-    if ($files.Count -ne 110) { throw "Unexpected file count $($files.Count), expected 110" }
-    foreach ($f in $files) {
-        if ($f.Length -ge 100MB) { throw "File over GitHub 100MB limit: $($f.FullName)" }
+    Write-Host "Extracting ZIP..."
+    Expand-Archive -LiteralPath $zipFullPath -DestinationPath $tempFolder -Force
+    $source = Join-Path $tempFolder "AI_Course_Organized_2026"
+    if (-not (Test-Path -LiteralPath $source -PathType Container)) {
+        throw "ZIP is missing AI_Course_Organized_2026 directory."
     }
+
+    $original = @(Get-ChildItem -LiteralPath $source -Recurse -File)
+    if ($original.Count -ne $requiredFileCount) {
+        throw "Wrong ZIP contents: found $($original.Count) files, expected $requiredFileCount."
+    }
+    foreach ($file in $original) {
+        if ($file.Length -ge 100MB) {
+            throw "File exceeds GitHub 100 MB limit: $($file.Name)"
+        }
+    }
+
     if ([string]::IsNullOrWhiteSpace($RepoPath)) {
         $RepoPath = Join-Path (Get-Location).Path "Data-Science-ML-Course"
-        if (-not (Test-Path (Join-Path $RepoPath ".git"))) {
-            git clone $RepoUrl $RepoPath
-            if ($LASTEXITCODE -ne 0) { throw "git clone failed; authenticate with GitHub first" }
+        if (-not (Test-Path -LiteralPath (Join-Path $RepoPath ".git"))) {
+            Write-Host "Cloning GitHub repository..."
+            & git clone $repoUrl $RepoPath
+            if ($LASTEXITCODE -ne 0) { throw "git clone failed." }
         }
     }
     $RepoPath = (Resolve-Path -LiteralPath $RepoPath).Path
-    if (-not (Test-Path -LiteralPath (Join-Path $RepoPath ".git"))) { throw "RepoPath must be a Git repository" }
-    $origin = (git -C $RepoPath remote get-url origin)
-    if ($LASTEXITCODE -ne 0 -or ($origin -notmatch "samiabo75/Data-Science-ML-Course(\.git)?$")) {
-        throw "Wrong git origin; refusing to push into unrelated repository: $origin"
+    if (-not (Test-Path -LiteralPath (Join-Path $RepoPath ".git"))) {
+        throw "RepoPath is not a Git repository."
     }
-    $dirty = @(git -C $RepoPath status --porcelain)
-    if ($dirty.Count -gt 0) { throw "Local repository has uncommitted changes. Commit/stash them first." }
-    git -C $RepoPath checkout main
-    if ($LASTEXITCODE -ne 0) { throw "Cannot check out main" }
-    git -C $RepoPath pull --ff-only origin main
-    if ($LASTEXITCODE -ne 0) { throw "Cannot fast-forward main. Resolve git divergence before upload." }
-    $target = Join-Path $RepoPath $Destination
-    if (Test-Path -LiteralPath $target) {
-        throw "Target folder exists. Nothing was overwritten: $target"
+    $origin = (& git -C $RepoPath remote get-url origin)
+    if ($LASTEXITCODE -ne 0 -or $origin -notmatch '(?i)github\.com[:/]samiabo75/Data-Science-ML-Course(\.git)?$') {
+        throw "Unexpected remote repository: $origin"
     }
-    New-Item -ItemType Directory -Path (Split-Path $target -Parent) -Force | Out-Null
-    Copy-Item -LiteralPath $source -Destination $target -Recurse
-    $copied = @(Get-ChildItem -LiteralPath $target -File -Recurse)
-    if ($copied.Count -ne $files.Count) { throw "File count mismatch after copying" }
-    git -C $RepoPath add -- "AI-Course-Textbooks-2026/ספרי_הקורס"
-    if ($LASTEXITCODE -ne 0) { throw "git add failed" }
-    git -C $RepoPath commit -m "Add complete AI course textbooks, 32 chapter labs and source PDFs"
-    if ($LASTEXITCODE -ne 0) { throw "git commit failed" }
-    git -C $RepoPath push origin main
-    if ($LASTEXITCODE -ne 0) { throw "git push failed; local commit exists; check credentials / branch rules" }
-    Write-Host "SUCCESS: Uploaded all $($files.Count) files to $Destination on main." -ForegroundColor Green
-    Write-Host "https://github.com/samiabo75/Data-Science-ML-Course/tree/main/AI-Course-Textbooks-2026"
+    $dirty = @(& git -C $RepoPath status --porcelain)
+    if ($LASTEXITCODE -ne 0 -or $dirty.Count -gt 0) {
+        throw "Git working directory has uncommitted changes. Commit or stash first."
+    }
+
+    & git -C $RepoPath checkout main
+    if ($LASTEXITCODE -ne 0) { throw "Cannot checkout main." }
+    & git -C $RepoPath pull --ff-only origin main
+    if ($LASTEXITCODE -ne 0) { throw "Git pull failed. Resolve it before retrying." }
+
+    $destination = Join-Path $RepoPath ($gitFolder.Replace("/", [string][IO.Path]::DirectorySeparatorChar))
+    if (Test-Path -LiteralPath $destination) {
+        throw "Destination already exists. No files overwritten: $destination"
+    }
+
+    Write-Host "Copying course libraries into repository..."
+    New-Item -ItemType Directory -Path $destination -Force | Out-Null
+    Get-ChildItem -LiteralPath $source -Force | ForEach-Object {
+        Copy-Item -LiteralPath $_.FullName -Destination $destination -Recurse -Force
+    }
+    $copied = @(Get-ChildItem -LiteralPath $destination -Recurse -File)
+    if ($copied.Count -ne $requiredFileCount) {
+        throw "Copy verification failed: $($copied.Count) files instead of $requiredFileCount."
+    }
+    & git -C $RepoPath add -- $gitFolder
+    if ($LASTEXITCODE -ne 0) { throw "git add failed." }
+    & git -C $RepoPath commit -m "Add complete AI textbooks: 32 chapters and labs"
+    if ($LASTEXITCODE -ne 0) { throw "git commit failed. Configure git user.name/user.email if needed." }
+    Write-Host "Pushing commit to GitHub..."
+    & git -C $RepoPath push origin main
+    if ($LASTEXITCODE -ne 0) {
+        throw "git push failed. Commit is saved locally; check GitHub authentication."
+    }
+    Write-Host "SUCCESS: Uploaded 110 course files to GitHub." -ForegroundColor Green
+    Write-Host "https://github.com/samiabo75/Data-Science-ML-Course/tree/main/AI-Course-Textbooks-2026/Course-Libraries"
 }
 finally {
-    if (Test-Path -LiteralPath $workspace) { Remove-Item -LiteralPath $workspace -Force -Recurse }
+    if (Test-Path -LiteralPath $tempFolder) {
+        Remove-Item -LiteralPath $tempFolder -Recurse -Force
+    }
 }
